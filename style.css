@@ -1,21 +1,109 @@
+/*========================Configurações gerais======================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: "arial";
+    font-family: "inter";
 }
+body{
+    background-color: #f2f3f4;
+}
+
+/*========================Cabeçalho da página======================== */
+
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 
-    background-color: orange;
-    color: white;
+    padding: 20px 0px 8px 0px;
+    background-color: #ff4500;
+}
+header section{
+    color: #fff;
     font-weight: bold;
-    
-    padding: 20px 0px 20px 0px;
-}
-#main{
+
     display: flex;
+    flex-direction: column;
 }
+header section nav{
+    display: flex;
+    justify-content: space-around;
+}
+header img{
+    margin-top: 25px;
+}
+
+#input_search{
+    width: 40em;
+    
+    border: 0;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+/*======================Estilo do corpo do site=====================*/
+
+#main{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
 #lista_produtos{
     display: flex;
+}
+/*Anuncio do produto */
+.produto{
+    background-color: #fff;
+
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.preco_produto{
+    color: #ff4500;
+
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 30px 0px 30px 0px;
+}
+.adicionar_carrinho{
+    background-color: #ff4500;
+    color: #fff;
+    font: 1.3em;
+    font-weight: bold;
+
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+/*=======================Rodapé da página============================*/
+
+footer{
+    padding: 20px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #35160b;
+    color: #fff;
+}
+
+footer nav{
+    margin-top: 20px;
+    display: flex;
+}
+footer nav a{
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+}
+footer nav p{
+    margin-left: 20px;
 }
