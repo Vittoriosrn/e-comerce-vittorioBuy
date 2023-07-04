@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Vittorio Buy</title>
 </head>
 <body>
@@ -11,30 +12,49 @@
         <p>PRODUTOS</p>
         <p>CARRINHO</p>
         <p>LOGIN</p>
-        <hr>
     </header>
-    <section>
-        <div class="produto">
-            <img src="" alt="mause_gamer">
-            <p class="name_produto">Mouse gamer</p>
-            <p class="preco_produto">150,00 R$</p>
-        </div>
-        <div class="produto">
-            <img src="" alt="teclado_gamer">
-            <p class="name_produto">Teclado gamer</p>
-            <p class="preco_produto">190,75 R$</p>
-        </div>
-        <div class="produto">
-            <img src="" alt="monitor_gamer">
-            <p class="name_produto">Monitor gamer</p>
-            <p class="preco_produto">1090,75 R$</p>
-        </div>
-        <div class="produto">
-            <img src="" alt="headset_gamer">
-            <p class="name_produto">Headset gamer</p>
-            <p class="preco_produto">170,75 R$</p>
-        </div>
-        <hr>
+    <section id="main">
+        <section id="painel_lateral">
+            <section id="section_ordenar">
+                <p>Ordenar</p>
+                <select>
+                    <option value="Escolha" selected>Escolha</option>
+                    <option value="">Preço crescente</option>
+                    <option value="">Preço decrescente</option>
+                    <option value="">Promoção</option>
+                    <option value="">Mais procurados</option>
+                    <option value="">Mais avaliados</option>
+                </select>
+            </section>
+            <section id="section_filtro">
+                <p>Filtrar por</p>
+                <p>Preço</p>
+                <p>Tipo de Produto</p>
+                <p>Marca</p>
+            </section>
+        </section>
+        <section id="lista_produtos">
+            <div class="produto">
+                <img src="" alt="mause_gamer">
+                <p class="name_produto">Mouse gamer</p>
+                <p class="preco_produto">150,00 R$</p>
+            </div>
+            <div class="produto">
+                <img src="" alt="teclado_gamer">
+                <p class="name_produto">Teclado gamer</p>
+                <p class="preco_produto">190,75 R$</p>
+            </div>
+            <div class="produto">
+                <img src="" alt="monitor_gamer">
+                <p class="name_produto">Monitor gamer</p>
+                <p class="preco_produto">1090,75 R$</p>
+            </div>
+            <div class="produto">
+                <img src="" alt="headset_gamer">
+                <p class="name_produto">Headset gamer</p>
+                <p class="preco_produto">170,75 R$</p>
+            </div>
+        </section>
     </section>
     <footer>
         <p>Developed By: Vittorio Kevin</p>
