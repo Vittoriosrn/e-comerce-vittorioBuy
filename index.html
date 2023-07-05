@@ -10,11 +10,11 @@
 <body>
     <header>
         <div>
-            <a href=""><img src="img/logo_vittorio_buy.png" alt="logo"></a>
+            <a href=""><img id="logo" src="img/logo_vittorio_buy.png" alt="logo"></a>
         </div>
         <section>
             <nav>
-                <a href=""><p>PRODUTOS</p></a>
+                <a href="" id="first_nav"><p>PRODUTOS</p></a>
                 <a href=""><p>CARRINHO</p></a>
                 <a href=""><p>LOGIN</p></a>
             </nav>
@@ -32,7 +32,7 @@
     <section id="main">
         <section id="painel_lateral">
             <section id="section_ordenar">
-                <p>Ordenar</p>
+                <p class="titulo_lateral">Ordenar:</p>
                 <select>
                     <option value="Escolha" selected>Escolha</option>
                     <option value="">Preço crescente</option>
@@ -43,17 +43,39 @@
                 </select>
             </section>
             <section id="section_filtro">
-                <p>Filtrar por</p>
+                <p class="titulo_lateral">Filtrar por:</p>
                 <p>Preço</p>
                 <p>---------------</p>
-                <p>Tipo de Produto</p>
-                <input type="checkbox" id="">
-                <input type="checkbox" id="">
-                <input type="checkbox" id="">
-                <p>Marca</p>
-                <input type="checkbox" id="">
-                <input type="checkbox" id="">
-                <input type="checkbox" id="">
+                <div class="produto_filtro">
+                    <p>Tipo de Produto</p>
+                    <label for="">
+                        <input type="checkbox" id="">
+                        Tipo
+                    </label>
+                    <label for="">
+                        <input type="checkbox" id="">
+                        Tipo
+                    </label>
+                    <label for="">
+                        <input type="checkbox" id="">
+                        Tipo
+                    </label>
+                </div>
+                <div class="produto_filtro">
+                    <p>Marca</p>
+                    <labeel>
+                        <input type="checkbox" id="">
+                        Marca
+                    </labeel>
+                    <label for="HiperX">
+                        <input type="checkbox" id="HiperX">
+                        HiperX
+                    </label>
+                    <label for="">
+                        <input type="checkbox" id="">
+                        Marca
+                    </label>
+                </div>
             </section>
         </section>
         <section id="lista_produtos">

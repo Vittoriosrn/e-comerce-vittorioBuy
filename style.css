@@ -28,17 +28,21 @@ header section{
 }
 header section nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 header nav a{
     color: #fff;
     text-decoration: none;
+    margin-left: 200px;
 }
-
+#first_nav{
+    margin-left: 0;
+}
 header section div{
     display: flex;
     justify-content: center;
 
+    width: 800px;
     margin: 20px;
 }
 #search_button{
@@ -53,18 +57,19 @@ header section div{
 }
 #search_button:hover{
     transition: 0.4s;
-    background-color: #ff4500;
+    background-color: #ff0000;
     color: #fff;
-    box-shadow: 0px 0px 10px #0000003e;
 }
-header img{
-    margin-top: 30px;
+#logo{
+    margin-top: 18px;
+    width: 100%;
 }
 #carrinho_img{
+    margin-top: 30px;
     width: 60px;
 }
 #input_search{
-    width: 40em;
+    width: 100%;
     
     border: 0;
     font-size: 1.2em;
@@ -81,14 +86,47 @@ header img{
     justify-content: center;
 }
 
+/*Barra lateral*/
+
+#painel_lateral{
+    background-color: #fff;
+    box-shadow: 0px 0px 2px #00000015;
+
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px
+}
+.produto_filtro{
+    display: flex;
+    flex-direction: column;
+}
+.produto_filtro p{
+    color: #5f5f5f;
+    margin: 10px 0px 10px 0px;
+    font-weight: bold;
+}
+select{
+    border: 0;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+.titulo_lateral{
+    color: #ff4500;
+    font-weight: bold;
+}
+
+/*Lista de produtos*/
+
 #lista_produtos{
     display: flex;
+    flex-wrap: wrap; /* Permite que os produtos quebrem para a próxima linha */
 }
 /*Anuncio do produto */
+
 .produto{
     width: 170px;
     background-color: #fff;
-    box-shadow: 0px 0px 5px #0000002b;
+    box-shadow: 0px 0px 2px #00000015;
 
     margin: 10px;
     border-radius: 10px;
@@ -99,7 +137,7 @@ header img{
 }
 .produto:hover{
     transition: 0.4s;
-    box-shadow: 0px 0px 20px #00000041;
+    box-shadow: 0px 0px 20px #00000015;
 }
 
 .preco_produto{
@@ -150,4 +188,44 @@ footer nav a{
 }
 footer nav p{
     margin-left: 20px;
+}
+
+/* =============================== Media queries =============================*/
+
+@media (max-width: 1168px){
+    header section div{
+        display: flex;
+        justify-content: center;
+    
+        width: 500px;
+        margin: 20px;
+    }
+    header nav a{
+        color: #fff;
+        text-decoration: none;
+        margin-left: 70px;
+    }
+}
+@media (max-width: 868px){
+    header nav a{
+        display: none;
+    }
+    header section div{
+        display: none;
+    }
+    #logo{
+        margin: 0;
+        padding-bottom: 15px;
+    }
+    #carrinho_img{
+        display: none;
+    }
+    #painel_lateral{
+        display: none;
+    }
+}
+@media (max-width: 646px){
+    #lista_produtos{
+        justify-content: center;
+    }
 }
