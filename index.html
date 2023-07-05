@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Vittorio Buy</title>
 </head>
 <body>
     <header>
         <div>
-            <img src="img/logo_vittorio_buy.png" alt="logo">
+            <a href=""><img src="img/logo_vittorio_buy.png" alt="logo"></a>
         </div>
         <section>
             <nav>
-                <p>PRODUTOS</p>
-                <p>CARRINHO</p>
-                <p>LOGIN</p>
+                <a href=""><p>PRODUTOS</p></a>
+                <a href=""><p>CARRINHO</p></a>
+                <a href=""><p>LOGIN</p></a>
             </nav>
-            <input id="input_search" type="text" placeholder="Pesquisar">
+            <div>
+                <input id="input_search" type="text" placeholder="Pesquisar">
+                <button id="search_button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
         </section>
         <div>
-            <img src="" alt="carrinho">
+            <a href=""><img id="carrinho_img" src="img/carrinho-de-compras.png" alt="carrinho"></a>
         </div>
     </header>
     <section id="main">
@@ -52,28 +58,40 @@
         </section>
         <section id="lista_produtos">
             <div class="produto">
-                <img src="" alt="mause_gamer">
+                <img src="img/mouse_gamer.jpg" alt="mause_gamer">
                 <p class="name_produto">Mouse gamer</p>
                 <p class="preco_produto">R$ 150,00</p>
-                <input class="adicionar_carrinho" type="button" value="COMPRAR">
+                <button class="adicionar_carrinho">
+                    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                    <p>COMPRAR</p>
+                </button>
             </div>
             <div class="produto">
-                <img src="" alt="teclado_gamer">
+                <img src="img/teclado_gamer.jpg" alt="teclado_gamer">
                 <p class="name_produto">Teclado gamer</p>
                 <p class="preco_produto">R$ 190,75</p>
-                <input class="adicionar_carrinho" type="button" value="COMPRAR">
+                <button class="adicionar_carrinho">
+                    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                    <p>COMPRAR</p>
+                </button>
             </div>
             <div class="produto">
-                <img src="" alt="monitor_gamer">
+                <img src="img/monitor_gamer.jpg" alt="monitor_gamer">
                 <p class="name_produto">Monitor gamer</p>
                 <p class="preco_produto">R$ 1090,75</p>
-                <input class="adicionar_carrinho" type="button" value="COMPRAR">
+                <button class="adicionar_carrinho">
+                    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                    <p>COMPRAR</p>
+                </button>
             </div>
             <div class="produto">
-                <img src="" alt="headset_gamer">
+                <img src="img/headset_gamer.jpg" alt="headset_gamer">
                 <p class="name_produto">Headset gamer</p>
                 <p class="preco_produto">R$ 170,75</p>
-                <input class="adicionar_carrinho" type="button" value="COMPRAR">
+                <button class="adicionar_carrinho">
+                    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                    <p>COMPRAR</p>
+                </button>
             </div>
         </section>
     </section>

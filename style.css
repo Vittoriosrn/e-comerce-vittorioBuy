@@ -30,18 +30,47 @@ header section nav{
     display: flex;
     justify-content: space-around;
 }
-header img{
-    margin-top: 25px;
+header nav a{
+    color: #fff;
+    text-decoration: none;
 }
 
+header section div{
+    display: flex;
+    justify-content: center;
+
+    margin: 20px;
+}
+#search_button{
+    background-color: #fff;
+    color: #ff4500;
+
+    border: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 45px;
+    width: 50px;
+}
+#search_button:hover{
+    transition: 0.4s;
+    background-color: #ff4500;
+    color: #fff;
+    box-shadow: 0px 0px 10px #0000003e;
+}
+header img{
+    margin-top: 30px;
+}
+#carrinho_img{
+    width: 60px;
+}
 #input_search{
     width: 40em;
     
     border: 0;
     font-size: 1.2em;
     padding: 10px;
-    margin: 20px;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 /*======================Estilo do corpo do site=====================*/
@@ -57,12 +86,22 @@ header img{
 }
 /*Anuncio do produto */
 .produto{
+    width: 170px;
     background-color: #fff;
+    box-shadow: 0px 0px 5px #0000002b;
 
     margin: 10px;
     border-radius: 10px;
     padding: 10px;
 }
+.produto img{
+    width: 100%;
+}
+.produto:hover{
+    transition: 0.4s;
+    box-shadow: 0px 0px 20px #00000041;
+}
+
 .preco_produto{
     color: #ff4500;
 
@@ -76,10 +115,15 @@ header img{
     font: 1.3em;
     font-weight: bold;
 
+    display: flex;
+    justify-content: center;
     border: 0;
     border-radius: 5px;
     padding: 10px;
     width: 100%;
+}
+.adicionar_carrinho p{
+    margin-left: 10px;
 }
 
 /*=======================Rodapé da página============================*/
@@ -91,7 +135,7 @@ footer{
     flex-direction: column;
     align-items: center;
 
-    background-color: #35160b;
+    background-color: #320d00;
     color: #fff;
 }
 
