@@ -45,18 +45,19 @@ header section div{
     margin: 20px;
 }
 #search_button{
-    background-color: #fff;
-    color: #ff4500;
+    background-color: #ff4500;
+    color: #ffffff;
 
-    border: 0;
+    border: 5px solid #fff;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     height: 45px;
-    width: 50px;
+    width: 80px;
 }
 #search_button:hover{
     transition: 0.4s;
-    background-color: #ff4500;
+    cursor: pointer;
+    background-color: #f8612a;
     color: #fff;
 }
 #logo{
@@ -78,17 +79,31 @@ header section div{
 }
 
 /*Lista de produtos*/
+#main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#main h1{
+    margin: 30px;
+    font-size: 2em;
+
+    color: #ff4500;
+}
 
 #lista_prod_carrinho{
     display: flex;
-    flex-wrap: wrap; /* Permite que os produtos quebrem para a próxima linha */
+    align-items: center;
+    flex-direction: column;
     max-width: 840px;
 }
 
 /*Anuncio do produto */
 
 .produto_carrinho{
-    width: 170px;
+    display: flex;
+    flex-direction: row;
+    width: 420px;
     background-color: #fff;
     box-shadow: 0px 0px 2px #00000015;
 
@@ -96,21 +111,39 @@ header section div{
     border-radius: 10px;
     padding: 10px;
 }
-.produto_carrinho img{
-    width: 100%;
-}
 .produto_carrinho:hover{
-    transition: 0.4s;
-    box-shadow: 0px 0px 20px #00000015;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px #00000017;
 }
-
+.produto_carrinho img{
+    width: 40%;
+    margin-right: 20px;
+}
+.produto_carrinho div{
+    display: flex;
+    flex-direction: column;
+}
 .preco_produto{
     color: #ff4500;
 
     font-weight: bold;
     font-size: 1.3em;
-    margin-top: 30px;
+    margin: 30px 0px 30px 0px;
 }
+.quant_produto_input{
+    border: 0;
+    width: 30px;
+    height: 30px;
+
+    font-size: 1.4em;
+}
+.container_quant_produto{
+    display: flex;
+}
+.container_quant_produto button{
+    width: 20px;
+}
+
 
 /*=================================MEDIA QUERIES============================*/
 @media (max-width: 1168px){
