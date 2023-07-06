@@ -57,7 +57,7 @@ header section div{
 }
 #search_button:hover{
     transition: 0.4s;
-    background-color: #ff0000;
+    background-color: #ff4500;
     color: #fff;
 }
 #logo{
@@ -65,8 +65,8 @@ header section div{
     width: 100%;
 }
 #carrinho_img{
-    margin-top: 30px;
-    width: 60px;
+    margin-top: 40px;
+    width: 40px;
 }
 #input_search{
     width: 100%;
@@ -120,6 +120,7 @@ select{
 #lista_produtos{
     display: flex;
     flex-wrap: wrap; /* Permite que os produtos quebrem para a próxima linha */
+    max-width: 840px;
 }
 /*Anuncio do produto */
 
