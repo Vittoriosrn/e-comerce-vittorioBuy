@@ -145,7 +145,7 @@ select{
 
     font-weight: bold;
     font-size: 1.3em;
-    margin: 30px 0px 30px 0px;
+    margin-top: 30px;
 }
 .adicionar_carrinho{
     background-color: #ff4500;
