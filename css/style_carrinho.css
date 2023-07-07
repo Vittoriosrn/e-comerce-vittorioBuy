@@ -102,8 +102,8 @@ header section div{
 
 .produto_carrinho{
     display: flex;
-    flex-direction: row;
-    width: 420px;
+    justify-content: space-around;
+    width: 520px;
     background-color: #fff;
     box-shadow: 0px 0px 2px #00000015;
 
@@ -111,12 +111,10 @@ header section div{
     border-radius: 10px;
     padding: 10px;
 }
-.produto_carrinho:hover{
-    cursor: pointer;
-    box-shadow: 0px 0px 20px #00000017;
-}
+
 .produto_carrinho img{
-    width: 40%;
+    width: 20%;
+    height: 20%;
     margin-right: 20px;
 }
 .produto_carrinho div{
@@ -130,6 +128,22 @@ header section div{
     font-size: 1.3em;
     margin: 30px 0px 30px 0px;
 }
+.excluir_produto{
+    border: 0;
+    width: 70px;
+    height: 50px;
+    font-weight: bold;
+    text-align: center;
+    transform: translate(-10px, 25px);
+
+    color: #ca0000;
+    background-color: transparent;
+}
+.excluir_produto:hover{
+    color: #f8612a;
+    cursor: pointer;
+}
+
 .quant_produto_input{
     border: 0;
     width: 30px;
@@ -138,10 +152,30 @@ header section div{
     font-size: 1.4em;
 }
 .container_quant_produto{
+    color: #505050;
+    font-weight: bold;
+
+    text-align: center;
+    margin: 0px 20px 0px 20px;
     display: flex;
+    flex-direction: row;
 }
 .container_quant_produto button{
-    width: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border: 0;
+    border-radius: 5px;
+
+    color: #ff4500;
+    background-color: transparent;
+
+    font-size: 1em;
+    text-align: center;
+}
+.container_quant_produto button:hover{
+    color: #505050;
+    cursor: pointer;
 }
 
 
