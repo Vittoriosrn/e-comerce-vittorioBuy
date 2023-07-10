@@ -146,12 +146,13 @@ select{
 #lista_produtos{
     display: flex;
     flex-wrap: wrap; /* Permite que os produtos quebrem para a próxima linha */
-    max-width: 840px;
+    max-width: 870px;
 }
 /*Anuncio do produto */
 
 .produto{
-    width: 170px;
+    width: 10vw;
+    min-width: 150px;
     background-color: #fff;
     box-shadow: 0px 0px 2px #00000015;
 
@@ -284,6 +285,9 @@ footer nav p{
     }
     #lista_produtos{
         justify-content: center;
+    }
+    .produto{
+        width: 170px;
     }
 }
 
