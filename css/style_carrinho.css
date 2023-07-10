@@ -106,10 +106,83 @@ header section div{
 #informacoes_gerais_carrinho{
     background-color: #fff;
 
-    width: 200px;
+    width: 300px;
     margin: 10px;
     border-radius: 10px;
+}
+#informacoes_gerais_carrinho h3{
+    color: #232323;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+#informacoes_gerais_carrinho input{
+    border: 2px solid #50505052;
+    border-radius: 5px;
+    padding: 5px;
+}
+#informacoes_gerais_carrinho > div{
+    margin: 20px;
+}
+.valor_produtos_container{
+    display: flex;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.valor_produtos{
+    margin-left: 10px;
+    font-weight: bold;
+
+    color: #232323;
+}
+.valor_carrinho_total{
+    color: #00830f;
+
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+.frete_resumo{
+    margin-bottom: 10px;
+}
+.frete_valor_container{
+    display: flex;
+}
+.valor_frete{
+    margin-left: 10px;
+    font-weight: bold;
+
+    color: #232323
+}
+.search_button_cep{
+    border: 2px solid #5050506a;
+    background-color: #fff;
+    color: #232323;
+    border-radius: 5px;
+    padding: 5px;
+}
+.search_button_cep:hover{
+    cursor: pointer;
+}
+
+.valor_total_container{
+    background-color: #00830f21;
+    color: #00830f;
+
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+#finalizar_compra{
+    border: 0;
     padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1em;
+
+    background-color: #ff4500;
+    color: #fff;
 }
 
 /*Anuncio do produto */
@@ -134,6 +207,13 @@ header section div{
 .produto_carrinho div{
     display: flex;
     flex-direction: column;
+}
+.produto_carrinho a{
+    text-decoration: none;
+    color: #232323;
+}
+.produto_carrinho a:hover{
+    text-decoration: underline;
 }
 .preco_produto{
     color: #ff4500;
@@ -192,6 +272,31 @@ header section div{
     cursor: pointer;
 }
 
+/*=======================Rodapé da página============================*/
+
+footer{
+    padding: 20px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #320d00;
+    color: #fff;
+}
+
+footer nav{
+    margin-top: 20px;
+    display: flex;
+}
+footer nav a{
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+}
+footer nav p{
+    margin-left: 20px;
+}
 
 /*=================================MEDIA QUERIES============================*/
 @media (max-width: 1168px){

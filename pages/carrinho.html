@@ -79,10 +79,40 @@
                 </div>
             </sectin>
             <section id="informacoes_gerais_carrinho">
-                <h3>Preço total</h3>
-                <p class="preco_produto">R$ 150,00</p>
+                <div>
+                    <h3>RESUMO</h3>
+                    <div class="valor_produtos_container">
+                        Valor dos produtos:
+                        <p class="valor_produtos">R$ 150,00</p>
+                    </div>
+                    <div class="frete_resumo">
+                        <label for="cep_input">Calcule o Frete</label>
+                        <input type="text" id="cep_input" placeholder="CEP">
+                        <button class="search_button_cep">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <div class="frete_valor_container">
+                            Frete:
+                            <p class="valor_frete">R$ 0,00</p>
+                        </div>
+                    </div>
+                    <div class="valor_total_container">
+                        Valor total:
+                        <br><b class="valor_carrinho_total">R$ 150,00</b>
+                    </div>
+                    <button id="finalizar_compra">
+                        FINALIZAR COMPRA
+                    </button>
+                </div>
             </section>
         </div>
     </section>
+    <footer>
+        <p>Developed By: Vittorio Kevin</p>
+        <nav>
+            <p>Linkedin:</p><a href="">Vittorio Kevin</a>
+            <p>GitHub:</p><a href="">Vittorio Kevin</a>
+        </nav>
+    </footer>
 </body>
 </html>
