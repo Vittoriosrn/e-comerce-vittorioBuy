@@ -35,6 +35,11 @@ header nav a{
     text-decoration: none;
     margin-left: 200px;
 }
+#nav_bar{
+    color: #fff;
+    font-size: 2em;
+    display: none;
+}
 #first_nav{
     margin-left: 0;
 }
@@ -60,8 +65,14 @@ header section div{
     background-color: #ff4500;
     color: #fff;
 }
+#search_bar{
+    display: none;
+}
+header > div{
+    width: 100px;
+}
 #logo{
-    margin-top: 18px;
+    margin-top: 40px;
     width: 100%;
 }
 #carrinho_img{
@@ -114,7 +125,22 @@ select{
     color: #ff4500;
     font-weight: bold;
 }
+#dropdown_filtro{
+    display: none;
+    color: #ff4500;
+    background-color: #fff;
 
+    font-weight: bold;
+    padding: 20px;
+}
+#dropdown_filtro:hover{
+    cursor: pointer;
+}
+#dropdown_filtro i{
+    margin-left: 7px;
+    padding-top: 1px;
+    font-size: 1.3em;
+}
 /*Lista de produtos*/
 
 #lista_produtos{
@@ -207,26 +233,57 @@ footer nav p{
         margin-left: 70px;
     }
 }
-@media (max-width: 868px){
+@media (max-width: 767px){
+    #main{
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    header{
+        justify-content: space-between;
+    }
     header nav a{
         display: none;
     }
     header section div{
         display: none;
     }
+    header > div{
+        width: 100px;
+    }
+    #tools_header{
+        margin-right: 30px;
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #search_bar{
+        display: block;
+        color: #fff;
+        font-size: 2em;
+    }
+    #nav_bar{
+        color: #fff;
+        font-size: 2em;
+        display: block;
+    }
     #logo{
         margin: 0;
         padding-bottom: 15px;
+        width: 100%;
+        margin-left: 30px;
     }
     #carrinho_img{
-        display: none;
+        padding: 0;
+        margin: 0;
     }
     #painel_lateral{
         display: none;
     }
-}
-@media (max-width: 646px){
+    #dropdown_filtro{
+        display: block;
+    }
     #lista_produtos{
         justify-content: center;
     }
 }
+
