@@ -35,7 +35,6 @@ header nav a{
     text-decoration: none;
     margin-left: 200px;
 }
-
 #first_nav{
     margin-left: 0;
 }
@@ -67,6 +66,7 @@ header nav a{
 #carrinho_conteudo{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 /* Carrinho Informações gerais lateral*/
@@ -88,7 +88,7 @@ header nav a{
     padding: 5px;
 }
 #informacoes_gerais_carrinho > div{
-    margin: 20px;
+    padding: 20px;
 }
 .valor_produtos_container{
     display: flex;
@@ -151,7 +151,6 @@ header nav a{
     background-color: #ff4500;
     color: #fff;
 }
-
 /*Anuncio do produto */
 
 .produto_carrinho{
@@ -273,11 +272,40 @@ footer nav p{
         margin-left: 70px;
     }
 }
-@media (max-width: 868px){
+@media (max-width: 898px){
+    .produto_carrinho{
+        width: 400px;
+        height: 100px;
+    }
+    #lista_prod_carrinho{
+        width: 100%;
+    }
+    .preco_produto{
+        margin-top: 20px;
+    }
+    #carrinho_conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #informacoes_gerais_carrinho{
+        width: 95%;
+    }
+}
+@media (max-width: 767px){
+    header{
+        justify-content: space-between;
+    }
     header nav a{
         display: none;
     }
+    header > div{
+        margin-left: 20px;
+        width: 20%;
+    }
     #logo{
+        width: 100%;
         margin: 0;
         padding-bottom: 15px;
     }
