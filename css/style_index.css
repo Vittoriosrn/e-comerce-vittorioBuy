@@ -151,8 +151,7 @@ select{
 /*Anuncio do produto */
 
 .produto{
-    width: 10vw;
-    min-width: 150px;
+    width: 20%;
     background-color: #fff;
     box-shadow: 0px 0px 2px #00000015;
 
@@ -285,9 +284,18 @@ footer nav p{
     }
     #lista_produtos{
         justify-content: center;
+        width: 100vw;
     }
+}
+/*Ajudando lista de produtos para não ficar espaçado do lado direito*/
+@media (max-width: 1014px){
     .produto{
-        width: 170px;
+        width: 33vw;
+    }
+}
+@media (max-width: 867px){
+    .produto{
+        width: 30vw;
     }
 }
 
