@@ -40,6 +40,9 @@ header nav a{
     font-size: 2em;
     display: none;
 }
+#nav_bar:hover{
+    cursor: pointer;
+}
 #first_nav{
     margin-left: 0;
 }
@@ -68,6 +71,9 @@ header section div{
 #search_bar{
     display: none;
 }
+#search_bar:hover{
+    cursor: pointer;
+}
 header > div{
     width: 100px;
 }
@@ -79,6 +85,7 @@ header > div{
     margin-top: 40px;
     width: 40px;
 }
+
 #input_search{
     width: 100%;
     
