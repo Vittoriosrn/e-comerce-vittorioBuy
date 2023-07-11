@@ -50,17 +50,26 @@ header nav a{
     padding-bottom: 10px;
 }
 
+
 /*Lista de produtos*/
 #main{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-#main h1{
-    margin: 30px;
+#title_carrinho{
     font-size: 2em;
-
-    color: #ff4500;
+    display: flex;
+    margin: 20px 0px 20px 0px;
+}
+#carrinho_img{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+#title_carrinho h1{
+    font-size: 1em;
+    color: #232323;
 }
 
 #lista_prod_carrinho{
@@ -107,12 +116,29 @@ header nav a{
 
     color: #232323;
 }
-.valor_carrinho_total{
+.valor_carrinho_avista{
     color: #00830f;
 
     font-weight: bold;
-    font-size: 1.5em;
-    margin-top: 10px;
+    font-size: 2em;
+}
+.valor_total_container{
+    color: #d10000;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 5px 30px 5px;
+
+    background-color: #ca000015;
+}
+.valor_carrinho_total{
+    color: #fa0000;
+    font-size: 2em;
+}
+#valor_aprazo{
+    color: #fa0000;
+    font-weight: bold;
 }
 .frete_resumo{
     margin-bottom: 10px;
@@ -137,9 +163,12 @@ header nav a{
     cursor: pointer;
 }
 
-.valor_total_container{
+.valor_avista_container{
+    font-weight: 600;
     background-color: #00830f21;
     color: #00830f;
+    display: flex;
+    flex-direction: column;
 
     width: 100%;
     text-align: center;

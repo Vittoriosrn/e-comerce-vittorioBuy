@@ -24,7 +24,10 @@
         </section>
     </header>
     <section id="main">
-        <h1>CARRINHO</h1>
+        <div id="title_carrinho">
+            <img id="carrinho_img" src="../img/carrinho-de-compras_orage.png" alt="carrinho">
+            <h1>CARRINHO</h1>
+        </div>
         <div id="carrinho_conteudo">
             <section id="lista_prod_carrinho">
                 <div class="produto_carrinho">
@@ -90,10 +93,17 @@
                             <p class="valor_frete">R$ 0,00</p>
                         </div>
                     </div>
-                    <div class="valor_total_container">
-                        Valor total:
-                        <br><b class="valor_carrinho_total">R$ 150,00</b>
+                    <div class="valor_avista_container">
+                        à vista
+                        <b class="valor_carrinho_avista">R$ 127,50</b>
+                        15% de desconto no PIX
                     </div>
+                    <div class="valor_total_container">
+                        <b class="valor_carrinho_total">R$ 150,00</b>
+                        <div>
+                            até 12x de <span id="valor_aprazo">R$ 12,50</span>
+                        </div>
+                     </div>
                     <button id="finalizar_compra">
                         FINALIZAR COMPRA
                     </button>
