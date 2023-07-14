@@ -281,11 +281,16 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
     background-color: #320d00;
     color: #fff;
 }
-
+footer b{
+    color: #fffb00;
+    font-weight: bold;
+    font-size: 1.3em;
+}
 footer nav{
     margin-top: 20px;
     display: flex;
@@ -297,6 +302,9 @@ footer nav a{
 }
 footer nav p{
     margin-left: 20px;
+}
+#aviso{
+    font-size: 0.8em;
 }
 
 /*=================================MEDIA QUERIES============================*/

@@ -1,0 +1,150 @@
+/*========================Configurações gerais======================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "inter";
+}
+body{
+    background-color: #f2f3f4;
+}
+
+/*========================Cabeçalho da página======================== */
+
+header{
+    display: flex;
+    justify-content: center;
+
+    padding: 20px 0px 8px 0px;
+    background-color: #ff4500;
+}
+header section{
+    color: #fff;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+}
+header section nav{
+    display: flex;
+    justify-content: center;
+}
+header nav a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 200px;
+}
+#nav_bar{
+    color: #fff;
+    font-size: 2em;
+    display: none;
+}
+#nav_bar:hover{
+    cursor: pointer;
+}
+#first_nav{
+    margin-left: 0;
+}
+header section div{
+    display: flex;
+    justify-content: center;
+
+    width: 800px;
+    margin: 20px;
+}
+#search_button{
+    background-color: #fff;
+    color: #ff4500;
+
+    border: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 45px;
+    width: 50px;
+}
+#search_button:hover{
+    transition: 0.4s;
+    background-color: #ff4500;
+    color: #fff;
+}
+#search_bar{
+    display: none;
+}
+#search_bar:hover{
+    cursor: pointer;
+}
+header > div{
+    width: 100px;
+}
+#logo{
+    margin-top: 40px;
+    width: 100%;
+}
+
+#input_search{
+    width: 100%;
+    
+    border: 0;
+    font-size: 1.2em;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* =============================== Media queries =============================*/
+
+@media (max-width: 1168px){
+    header section div{
+        display: flex;
+        justify-content: center;
+    
+        width: 500px;
+        margin: 20px;
+    }
+    header nav a{
+        color: #fff;
+        text-decoration: none;
+        margin-left: 70px;
+    }
+}
+@media (max-width: 767px){
+    header{
+        justify-content: space-between;
+    }
+    header nav a{
+        display: none;
+    }
+    header section div{
+        display: none;
+    }
+    header > div{
+        width: 100px;
+    }
+    #tools_header{
+        margin-right: 30px;
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #search_bar{
+        display: block;
+        color: #fff;
+        font-size: 2em;
+    }
+    #nav_bar{
+        color: #fff;
+        font-size: 2em;
+        display: block;
+    }
+    #logo{
+        margin: 0;
+        padding-bottom: 15px;
+        width: 100%;
+        margin-left: 30px;
+    }
+    #carrinho_img{
+        padding: 0;
+        margin: 0;
+    }
+}
