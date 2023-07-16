@@ -91,7 +91,10 @@ header > div{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-
+#carrinho_img{
+    margin-top: 40px;
+    width: 40px;
+}
 /*======================Estilo do corpo do site=====================*/
 
 #main{
@@ -99,12 +102,6 @@ header > div{
     display: flex;
     justify-content: center;
 }
-
-#carrinho_img{
-    margin-top: 40px;
-    width: 40px;
-}
-
 
 /*Barra lateral*/
 
