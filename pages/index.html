@@ -45,7 +45,7 @@
         <section id="painel_lateral">
             <section id="section_ordenar">
                 <p class="titulo_lateral">Ordenar:</p>
-                <select>
+                <select id="select_ordem">
                     <option value="Escolha" selected>Escolha</option>
                     <option value="">Preço crescente</option>
                     <option value="">Preço decrescente</option>
@@ -59,34 +59,30 @@
                 <p>Preço</p>
                 <p>---------------</p>
                 <div class="produto_filtro">
-                    <p>Tipo de Produto</p>
-                    <label for="">
-                        <input type="checkbox" id="">
-                        Tipo
-                    </label>
-                    <label for="">
-                        <input type="checkbox" id="">
-                        Tipo
-                    </label>
-                    <label for="">
-                        <input type="checkbox" id="">
-                        Tipo
-                    </label>
-                </div>
-                <div class="produto_filtro">
                     <p>Marca</p>
-                    <labeel>
-                        <input type="checkbox" id="">
-                        Marca
-                    </labeel>
-                    <label for="HiperX">
-                        <input type="checkbox" id="HiperX">
+                    <label for="Asus">
+                        <input type="checkbox" class="filtro_marca" id="Asus">
+                        Asus
+                    </label>
+                    <label for="HyperX">
+                        <input type="checkbox" class="filtro_marca" id="HyperX">
                         HiperX
                     </label>
-                    <label for="">
-                        <input type="checkbox" id="">
-                        Marca
+                    <label for="Redragon">
+                        <input type="checkbox" class="filtro_marca" id="Redragon">
+                        Redragon
                     </label>
+                    <label for="AMD">
+                        <input type="checkbox" class="filtro_marca" id="AMD">
+                        AMD
+                    </label>
+                    <label for="Husky">
+                        <input type="checkbox" class="filtro_marca" id="Husky">
+                        Husky Gaming
+                    </label>
+                    <button id="aplicar_filtro">
+                        APLICAR
+                    </button>
                 </div>
             </section>
         </section>
@@ -99,29 +95,39 @@
                 </a>
             </div>
             <div class="produto">
-                <img src="../img/teclado_gamer.jpg" alt="teclado_gamer">
-                <p class="name_produto">Teclado Mecânico Gamer HyperX Alloy MKW100</p>
-                <p class="preco_produto">R$ 190,75</p>
+                <a href="../pages/produto.html">
+                    <img src="../img/teclado_gamer.jpg" alt="teclado_gamer">
+                    <p class="name_produto">Teclado Mecânico Gamer HyperX Alloy MKW100</p>
+                    <p class="preco_produto">R$ 190,75</p>
+                </a>
             </div>
             <div class="produto">
-                <img src="../img/rtx-3060.jpg" alt="rtx_3060">
-                <p class="name_produto">Placa de Vídeo RTX 3060 Asus Dual NVIDEA GeForce</p>
-                <p class="preco_produto">R$ 190,75</p>
+                <a href="../pages/produto.html"">
+                    <img src="../img/rtx-3060.jpg" alt="rtx_3060">
+                    <p class="name_produto">Placa de Vídeo RTX 3060 Asus Dual NVIDEA GeForce</p>
+                    <p class="preco_produto">R$ 190,75</p>
+                </a>
             </div>
             <div class="produto">
-                <img src="../img/monitor_gamer.jpg" alt="monitor_gamer">
-                <p class="name_produto">Monitor Gamer Husky Storm 27' Full HD'</p>
-                <p class="preco_produto">R$ 1.090,75</p>
+                <a href="../pages/produto.html"">
+                    <img src="../img/monitor_gamer.jpg" alt="monitor_gamer">
+                    <p class="name_produto">Monitor Gamer Husky Storm 27' Full HD'</p>
+                    <p class="preco_produto">R$ 1.090,75</p>
+                </a>
             </div>
             <div class="produto">
-                <img src="../img/headset_gamer.jpg" alt="headset_gamer">
-                <p class="name_produto">Headset Gamer HyperX Cloud Blue</p>
-                <p class="preco_produto">R$ 170,75</p>
+                <a href="../pages/produto.html"">
+                    <img src="../img/headset_gamer.jpg" alt="headset_gamer">
+                    <p class="name_produto">Headset Gamer HyperX Cloud Blue</p>
+                    <p class="preco_produto">R$ 170,75</p>
+                </a>
             </div>
             <div class="produto">
-                <img src="../img/ryzen-7.jpg" alt="ryzen_7">
-                <p class="name_produto">Processador AMD Ryzen 7 5700X, 3.4GHz</p>
-                <p class="preco_produto">R$ 1.199,99</p>
+                <a href="../pages/produto.html"">
+                    <img src="../img/ryzen-7.jpg" alt="ryzen_7">
+                    <p class="name_produto">Processador AMD Ryzen 7 5700X, 3.4GHz</p>
+                    <p class="preco_produto">R$ 1.199,99</p>
+                </a>
             </div>
         </section>
     </section>
@@ -132,5 +138,6 @@
             <p>GitHub:</p><a href="">Vittorio Kevin</a>
         </nav>
     </footer>
+    <script src="../js/script.js"></script>
 </body>
 </html>
