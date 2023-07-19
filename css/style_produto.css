@@ -4,7 +4,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "inter";
+    font-family: "inter", sans-serif;
 }
 body{
     background-color: #f2f3f4;
@@ -107,8 +107,8 @@ main{
     flex-direction: row;
 
     background-color: #fff;
-    border-radius: 10px;
     margin-top: 30px;
+    padding: 20px;
 }
 #prod_ilustracao{
     display: flex;
@@ -219,10 +219,56 @@ main{
 /*=============================Informações do produto=====================*/
 
 #info_prod_container{
-    background-color: #fff;
-    padding: 10px;
+    padding: 30px;
     margin-top: 30px;
 
+    background-color: #fff;
+    width: 768px;
+}
+#info_prod_container h3{
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+td, th{
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+
+    padding: 15px;
+}
+
+/*=======================Rodapé da página============================*/
+
+footer{
+    padding: 20px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background-color: #320d00;
+    color: #fff;
+}
+footer b{
+    color: #fffb00;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+footer nav{
+    margin-top: 20px;
+    display: flex;
+}
+footer nav a{
+    color: #fff;
+    text-decoration: none;
+    font-style: italic;
+}
+footer nav p{
+    margin-left: 20px;
+}
+#aviso{
+    font-size: 0.8em;
 }
 
 /* =============================== Media queries =============================*/
