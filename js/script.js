@@ -47,15 +47,24 @@ b_aplicar_filtro.addEventListener("click", () => {
 
 // Evento/Função ORDENAR
 select_ordem.addEventListener('change', () => {
-    let array_prod = []
-    for(let i = 0; i < produto.length; i++){
-        for(let j = 0; j < produto.length; j++){
-            if(produto[i].querySelector(".preco_produto").innerText > array_prod[j]){
-                array_prod[j] = produto[i].querySelector(".preco_produto").innerText
-            }
+    const array_prod = Array.from(produto) // função from para transformar NodeList em array para o sort
+    array_prod.sort((a, b) => { // Metodo sort para ordenar o array de elementos
+        if(Number(a.querySelector(".value_preco").innerText) < Number(b.querySelector(".value_preco").innerText)){
+            return 1  // retorna 1 para verdadeiro em ordem decrescente e -1 para ordem crescente
+        }else{
+            return -1 
         }
-    }
-    console.log(array_prod)
+    })
+    //Limpar os produtos
+    produto.forEach(() => {
+        document.querySelector(".produto").remove() // Seleciona cada produto e remove
+    })
+    //Mostrar produtos ordenados
+
+    array_prod.forEach((e) =>{
+        const lista_produtos = document.querySelector("#lista_produtos")
+        lista_produtos.appendChild(e) // e representa o produto que o forEach está perconrrendo
+    })
 })
 
 
