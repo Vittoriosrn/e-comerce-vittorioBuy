@@ -1,11 +1,11 @@
 const b_aplicar_filtro = document.querySelector("#aplicar_filtro")  // Botão para aplicar o filtro
+const produto = document.querySelectorAll(".produto") // todos os produtos em amostra
+const select_ordem = document.querySelector("#select_ordem")
 
+// ==================== FUNÇÕES ====================
 
 // Função para FILTRAR os produtos
 function filtrar(marcas){
-    const filtro_marca = document.querySelectorAll(".filtro_marca") // todos os filtros
-    const produto = document.querySelectorAll(".produto") // todos os produtos em amostra
-
     if(marcas.length > 0){
         for(let p = 0; p < produto.length; p++){
             for(let m = 0; m < marcas.length; m++){
@@ -30,8 +30,6 @@ function filtrar(marcas){
     }
 }
 
-// ==================== EVENTOS ====================
-
 // Evento FILTRAR
 b_aplicar_filtro.addEventListener("click", () => {
     const filtro_marca = document.querySelectorAll(".filtro_marca")
@@ -46,6 +44,20 @@ b_aplicar_filtro.addEventListener("click", () => {
     }
     filtrar(produtos_checked)
 })
+
+// Evento/Função ORDENAR
+select_ordem.addEventListener('change', () => {
+    let array_prod = []
+    for(let i = 0; i < produto.length; i++){
+        for(let j = 0; j < produto.length; j++){
+            if(produto[i].querySelector(".preco_produto").innerText > array_prod[j]){
+                array_prod[j] = produto[i].querySelector(".preco_produto").innerText
+            }
+        }
+    }
+    console.log(array_prod)
+})
+
 
 
 
