@@ -147,7 +147,12 @@ select{
     padding-top: 1px;
     font-size: 1.3em;
 }
+#preco_filtro{
+    display: flex;
+    flex-direction: column;
+}
 #preco_filtro p{
+
     margin-bottom: 10px;
     font-weight: bold;
 
@@ -162,13 +167,13 @@ select{
     font-size: 1em;
     padding: 2px;
 }
-#slider{
-    display: flex;
-    position: relative
+#preco_filtro span{
+    font-size: 0.9em;
+    margin-bottom: 7px;
 }
-#slider input{
-    position: absolute;
-    width: 100%;
+#preco_filtro span:hover{
+    color: #ff4500;
+    cursor: pointer;
 }
 
 /*Lista de produtos*/

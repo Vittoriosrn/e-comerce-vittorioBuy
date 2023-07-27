@@ -1,6 +1,7 @@
 const b_aplicar_filtro = document.querySelector("#aplicar_filtro")  // Botão para aplicar o filtro
 const produto = document.querySelectorAll(".produto") // todos os produtos em amostra
 const select_ordem = document.querySelector("#select_ordem")
+const option_valor_filter = document.querySelector(".option_valor_filter")
 
 // ==================== FUNÇÕES ====================
 
@@ -96,6 +97,12 @@ select_ordem.addEventListener('change', (e) => {
         lista_produtos.appendChild(e) // e representa o produto que o forEach está percorrendo
     })
 })
+
+// Evento filtrar por preço
+option_valor_filter.addEventListener('click', () => {
+    console.log("Clicked")
+})
+
 
 
 
