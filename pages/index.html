@@ -55,8 +55,16 @@
             </section>
             <section id="section_filtro">
                 <p class="titulo_lateral">Filtrar por:</p>
-                <p>Preço</p>
-                <p>---------------</p>
+
+                <div id="preco_filtro">
+                    <p>Preço</p>
+                    <input type="number" id="preco_max" value="0">
+                    <input type="number" id="preco_min" value="10000">
+                    <div id="slider">
+                        <input type="range">
+                    </div>
+                </div>
+
                 <div class="produto_filtro">
                     <p>Marca</p>
                     <label for="Asus">
@@ -86,8 +94,8 @@
             </section>
         </section>
         <section id="lista_produtos">
-            <div class="produto">
-                <a href="../pages/produto.html">
+            <div class="produto" id="01">
+                <a href="../pages/produto.html?produto/01">
                     <div id="header_prod">
                         <p class="promocao_produto">10% OFF</p>
                         <div id="avaliacao_prod">
@@ -98,7 +106,7 @@
                             <i class="fa-sharp fa-regular fa-star"></i>
                         </div>
                     </div>
-                    <img src="../img/mouse_gamer.jpg" alt="mause_gamer">
+                    <img src="../img/mouse_gamer/mouse_gamer.jpg" alt="mause_gamer">
                     <p class="name_produto">Mouse Gamer Redragon Cobra</p>
                     <p class="preco_produto">R$ 150,00</p>
 
@@ -107,8 +115,8 @@
                     <span class="avaliacao hide">4</span>
                 </a>
             </div>
-            <div class="produto">
-                <a href="../pages/produto.html">
+            <div class="produto" id="02">
+                <a href="../pages/produto.html?produto/02">
                     <div id="header_prod">
                         <p class="promocao_produto">30% OFF</p>
                         <div id="avaliacao_prod">
@@ -128,8 +136,8 @@
                     <span class="avaliacao hide">5</span>
                 </a>
             </div>
-            <div class="produto">
-                <a href="../pages/produto.html">
+            <div class="produto" id="03">
+                <a href="../pages/produto.html?produto/03">
                     <div id="header_prod">
                         <div id="avaliacao_prod">
                             <i class="fa-sharp fa-solid fa-star"></i>
@@ -148,8 +156,8 @@
                     <span class="avaliacao hide">3</span>
                 </a>
             </div>
-            <div class="produto">
-                <a href="../pages/produto.html">
+            <div class="produto" id="04">
+                <a href="../pages/produto.html?produto/04">
                     <div id="header_prod">
                         <div id="avaliacao_prod">
                             <i class="fa-sharp fa-solid fa-star"></i>
@@ -168,8 +176,8 @@
                     <span class="avaliacao hide">5</span>
                 </a>
             </div>
-            <div class="produto">
-                <a href="../pages/produto.html">
+            <div class="produto" id="05">
+                <a href="../pages/produto.html?produto/05">
                     <div id="header_prod">
                         <div id="avaliacao_prod">
                             <i class="fa-sharp fa-solid fa-star"></i>
@@ -188,8 +196,8 @@
                     <span class="avaliacao hide">4</span>
                 </a>
             </div>
-            <div class="produto">
-                <a href="../pages/produto.html">
+            <div class="produto" id="06">
+                <a href="../pages/produto.html?produto/06">
                     <div id="header_prod">
                         <p class="promocao_produto">40% OFF</p>
                         <div id="avaliacao_prod">
