@@ -6,28 +6,32 @@ const option_valor_filter = document.querySelector(".option_valor_filter")
 // ==================== FUNÇÕES ====================
 
 // Função para FILTRAR os produtos
-function filtrar(marcas){
-    if(marcas.length > 0){
-        for(let p = 0; p < produto.length; p++){
-            for(let m = 0; m < marcas.length; m++){
-                if(produto[p].outerText.includes(marcas[m])){
-                    produto[p].classList.remove("hide")
-                    produto[p].classList.add("check") // para checar se o produto selecionado no filtro já esta à amostra
-                }else{
-                    if(!produto[p].classList.contains("check")){ // se nao tiver amostra ele pode ocutar
-                        produto[p].classList.add("hide")
-                        produto[p].classList.add("hide_now")
+function filtrar(param){
+    if(param === Number){
+
+    }else{
+        if(param.length > 0){
+            for(let p = 0; p < produto.length; p++){
+                for(let m = 0; m < param.length; m++){
+                    if(produto[p].outerText.includes(param[m])){
+                        produto[p].classList.remove("hide")
+                        produto[p].classList.add("check") // para checar se o produto selecionado no filtro já esta à amostra
+                    }else{
+                        if(!produto[p].classList.contains("check")){ // se nao tiver amostra ele pode ocutar
+                            produto[p].classList.add("hide")
+                            produto[p].classList.add("hide_now")
+                        }
                     }
                 }
             }
+        }else{
+            for(let p = 0; p < produto.length; p++){  // For para remover o hide de cada produto
+                produto[p].classList.remove("hide")
+            }
         }
-    }else{
-        for(let p = 0; p < produto.length; p++){  // For para remover o hide de cada produto
-            produto[p].classList.remove("hide")
+        for(let i = 0; i < produto.length; i++){ // for para remover o check dos produtos
+            produto[i].classList.remove("check")
         }
-    }
-    for(let i = 0; i < produto.length; i++){ // for para remover o check dos produtos
-        produto[i].classList.remove("check")
     }
 }
 
@@ -97,12 +101,6 @@ select_ordem.addEventListener('change', (e) => {
         lista_produtos.appendChild(e) // e representa o produto que o forEach está percorrendo
     })
 })
-
-// Evento filtrar por preço
-option_valor_filter.addEventListener('click', () => {
-    console.log("Clicked")
-})
-
 
 
 
