@@ -8,15 +8,17 @@ const option_valor_filter = document.querySelector(".option_valor_filter")
 function filtrar_preco(menor_preco, maior_preco){
     for(let p = 0; p < produto.length; p++){
         let value_preco = Number(produto[p].querySelector(".value_preco").innerText)
-        if(value_preco <= maior_preco && value_preco >= menor_preco){
+        if(value_preco <= maior_preco && value_preco >= menor_preco && !produto[p].classList.contains("hide_now")){
             produto[p].classList.remove("hide")
             produto[p].classList.add("check") // para checar se o produto selecionado no filtro já esta à amostra
         }else{
             if(!produto[p].classList.contains("check")){ // se nao tiver amostra ele pode ocutar
                 produto[p].classList.add("hide")
-                produto[p].classList.add("hide_now")
             }
         }
+    }
+    for(let i = 0; i < produto.length; i++){ // for para remover o check dos produtos
+        produto[i].classList.remove("check")
     }
 }
 // Função para FILTRAR geral para os produtos
@@ -43,12 +45,13 @@ function filtrar(param){
             break
         }
     }else{
-        if(param.length > 0){
+        if(param.length > 0 && param[0] != "empty"){
             for(let p = 0; p < produto.length; p++){
                 for(let m = 0; m < param.length; m++){
                     if(produto[p].outerText.includes(param[m])){
                         produto[p].classList.remove("hide")
                         produto[p].classList.add("check") // para checar se o produto selecionado no filtro já esta à amostra
+                        produto[p].classList.remove("hide_now")
                     }else{
                         if(!produto[p].classList.contains("check")){ // se nao tiver amostra ele pode ocutar
                             produto[p].classList.add("hide")
@@ -60,6 +63,7 @@ function filtrar(param){
         }else{
             for(let p = 0; p < produto.length; p++){  // For para remover o hide de cada produto
                 produto[p].classList.remove("hide")
+                produto[p].classList.remove("hide_now")
             }
         }
         for(let i = 0; i < produto.length; i++){ // for para remover o check dos produtos
@@ -70,7 +74,7 @@ function filtrar(param){
 // Evento FILTRAR
 b_aplicar_filtro.addEventListener("click", () => {
     const filtro_marca = document.querySelectorAll(".filtro_marca")
-    const produtos_checked = [] // Array para armazena os filtros selecionado
+    const produtos_checked = ['empty'] // Array para armazena os filtros selecionado
     let n_checked = 0 // Esse indice define a posição dos filtros checados no array
     
     for(let i = 0; i < filtro_marca.length; i++){ // For percorre todos os filtros para checar qual está selecionado
