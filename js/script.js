@@ -1,7 +1,9 @@
+import dados_produtos from './produtos.js'
+console.log(dados_produtos)
+
 const b_aplicar_filtro = document.querySelector("#aplicar_filtro")  // Botão para aplicar o filtro
 const produto = document.querySelectorAll(".produto") // todos os produtos em amostra
 const select_ordem = document.querySelector("#select_ordem")
-const option_valor_filter = document.querySelector(".option_valor_filter")
 
 // ==================== FUNÇÕES ====================
 // Função filtrar por PREÇO
