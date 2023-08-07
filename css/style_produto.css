@@ -166,7 +166,7 @@ main{
     font-weight: 100;
     font-size: 1.1em;
 }
-#valor_avista{
+.valor_avista{
     display: flex;
     flex-direction: column;
     text-align: center;

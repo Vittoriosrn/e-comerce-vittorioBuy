@@ -60,15 +60,15 @@
                 </div>
             </div>
             <div id="info_prod_valores">
-                <h3>Mouse Gamer Redragon Cobra</h3>
-                <div id="valor_avista">
-                    <span class="valor_style" id="valor_avista_total">R$ 1.500,00</span>
+                <h3 class="nome_produto"></h3>
+                <div class="valor_avista">
+                    <span class="valor_style" class="valor_avista_total"></span>
                     à vista no pix 15% de desconto
                 </div>
                 <div id="valor_aprazo">
                     <div>
-                        <span class="valor_style" id="valor_aprazo_total">R$ 1.600,00</span>
-                        <span>10x de R$ 160,00 no cartão</span>
+                        <span class="valor_style" id="valor_aprazo_total">R$ <span class="preco_total"></span></span>
+                        <span><span class="parcela"></span> de R$ <span class="preco_aprazo"></span> no cartão</span>
                     </div>
                     <button id="ver_parcelamento">
                         ver parcelamento
@@ -85,59 +85,36 @@
                 <tbody>
                     <tr>
                         <th class="name-fild Marca">Marca</th>
-                        <td class="value-fild Marca">Redragon</td>
+                        <td class="value-fild Marca"></td>
                     </tr>
                     <tr>
                         <th class="name-fild Modelo">Modelo</th>
-                        <td class="value-fild Modelo">M711 V2</td>
+                        <td class="value-fild Modelo"></td>
                     </tr>
                     <tr>
                         <th class="name-fild Especificacoes">Especificações</th>
                         <td class="value-fild Especificacoes">
-                            Sensor PIXART 3327 para Alta Performance (12400DPI/20G/100ips) (óptico)
-                            <br>
-                            Iluminação RGB Ajustável: Sistema de Iluminação Chroma RGB! (7 Diferentes Modos de Iluminação)
-                            <br>
-                            Polling Rate de 1000hz (Tempo de Resposta Ajustável via Software de 1/2/4/8ms)
-                            <br>
-                            7 Botões Programáveis
-                            <br>
-                            Comprimento: 1.8 metros
-                            <br>
-                            Cabo de fibra trançada
-                            <br>
-                            2 Botões Laterais para funções / atalhos, macros e etc
-                            <br>
-                            Compatível com Software para Configuração de Macro / Ajuste Iluminação RGB / Configurações de Performance
-                            <br>
-                            Memória Interna para Salvamento de Configurações
-                            <br>
-                            Base com Pés de Teflon para Deslize Suave
-                            <br>
-                            5 Perfis de Configurações para Troca Rápida de Configurações de um Game para Outro
-                            <br>
-                            Pegada Ergonômica confortável perfeita para Destros
-                            <br>
-                            Cabo Trançado para maior Resistência
+                            
                         </td>
                     </tr>
                     <tr>
                         <th class="name-fild Conteudo_embalagem">Conteúdo da Embalagem</th>
-                        <td class="value-fild Conteudo_embalagem">Mouse Gamer Redragon Cobra Preto RGB M711 V2</td>
+                        <td class="value-fild Conteudo_embalagem"></td>
                     </tr>
                     <tr>
                         <th class="name-fild Garantia">Garantia</th>
-                        <td class="value-fild Garantia">12 meses de garantia</td>
+                        <td class="value-fild Garantia"></td>
                     </tr>
                     <tr>
                         <th class="name-fild Peso">Peso</th>
-                        <td class="value-fild Peso">210 gramas (bruto com embalagem)</td>
+                        <td class="value-fild Peso"></td>
                     </tr>
                 </tbody>
             </table>
         </section>
         <section id="avaliacoes_container">
-        
+            AVALIAÇÕES DOS CLIENTES<br>
+            ########################
         </section>
     </main>
     <footer>
@@ -153,5 +130,6 @@
             <p>GitHub:</p><a href="">Vittorio Kevin</a>
         </nav>
     </footer>
+    <script src="../js/produtos_load.js" type="module"></script>
 </body>
 </html>

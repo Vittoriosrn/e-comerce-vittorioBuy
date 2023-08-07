@@ -4,6 +4,7 @@ console.log(dados_produtos)
 const b_aplicar_filtro = document.querySelector("#aplicar_filtro")  // Botão para aplicar o filtro
 const produto = document.querySelectorAll(".produto") // todos os produtos em amostra
 const select_ordem = document.querySelector("#select_ordem")
+const spans_filtro_preco = document.querySelectorAll(".span_preco"); // Selecionar todos os spans do filtro por preço
 
 // ==================== FUNÇÕES ====================
 // Função filtrar por PREÇO
@@ -73,6 +74,13 @@ function filtrar(param){
         }
     }
 }
+// Evento FILTRAR POR PREÇO
+spans_filtro_preco.forEach((span, index) =>{ 
+    span.addEventListener("click", () =>{
+        filtrar(index)
+    })
+})
+
 // Evento FILTRAR
 b_aplicar_filtro.addEventListener("click", () => {
     const filtro_marca = document.querySelectorAll(".filtro_marca")
@@ -139,7 +147,3 @@ select_ordem.addEventListener('change', (e) => {
         lista_produtos.appendChild(e) // e representa o produto que o forEach está percorrendo
     })
 })
-
-
-
-
