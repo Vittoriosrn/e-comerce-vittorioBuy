@@ -7,7 +7,7 @@
     font-family: "inter";
 }
 body{
-    background-color: #f2f3f4;
+    background-color: #232221;
 }
 
 /*========================Cabeçalho da página======================== */
@@ -17,62 +17,7 @@ header{
     justify-content: center;
 
     padding: 20px 0px 8px 0px;
-    background-color: #ff4500;
-}
-header section{
-    color: #fff;
-    font-weight: bold;
-
-    display: flex;
-    flex-direction: column;
-}
-header section nav{
-    display: flex;
-    justify-content: center;
-}
-header nav a{
-    color: #fff;
-    text-decoration: none;
-    margin-left: 200px;
-}
-#nav_bar{
-    color: #fff;
-    font-size: 2em;
-    display: none;
-}
-#nav_bar:hover{
-    cursor: pointer;
-}
-#first_nav{
-    margin-left: 0;
-}
-header section div{
-    display: flex;
-    justify-content: center;
-
-    width: 800px;
-    margin: 20px;
-}
-#search_button{
-    background-color: #fff;
-    color: #ff4500;
-
-    border: 0;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 45px;
-    width: 50px;
-}
-#search_button:hover{
-    transition: 0.4s;
-    background-color: #ff4500;
-    color: #fff;
-}
-#search_bar{
-    display: none;
-}
-#search_bar:hover{
-    cursor: pointer;
+    background-color: #232221;
 }
 header > div{
     width: 100px;
@@ -81,19 +26,10 @@ header > div{
     margin-top: 40px;
     width: 100%;
 }
-
-#input_search{
-    width: 100%;
-    
-    border: 0;
-    font-size: 1.2em;
-    padding: 10px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-#carrinho_img{
-    margin-top: 40px;
-    width: 40px;
+/*========================Banner==========================*/
+.banner{
+    display: flex;
+    justify-content: center;
 }
 /*======================Estilo do corpo do site=====================*/
 
