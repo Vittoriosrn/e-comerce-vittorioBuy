@@ -14,17 +14,40 @@ body{
 
 header{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 
-    padding: 20px 0px 8px 0px;
+    padding: 20px 0px 20px 0px;
     background-color: #232221;
+    font-weight: bold;
+}
+header a{
+    text-decoration: none;
+    color: white;
 }
 header > div{
     width: 100px;
 }
-#logo{
-    margin-top: 40px;
-    width: 100%;
+header > nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 190px;
+}
+#register{
+    background-color: #ff4500;
+    padding: 10px 20px 10px 20px;
+}
+.space{
+    margin-right: 90px;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
 }
 /*========================Banner==========================*/
 .banner{
@@ -193,37 +216,12 @@ footer nav p{
 
 /* =============================== Media queries =============================*/
 
-@media (max-width: 1168px){
-    header section div{
-        display: flex;
-        justify-content: center;
-    
-        width: 500px;
-        margin: 20px;
-    }
-    header nav a{
-        color: #fff;
-        text-decoration: none;
-        margin-left: 70px;
-    }
-}
 @media (max-width: 767px){
     #main{
         flex-direction: column;
         margin-top: 10px;
     }
-    header{
-        justify-content: space-between;
-    }
-    header nav a{
-        display: none;
-    }
-    header section div{
-        display: none;
-    }
-    header > div{
-        width: 100px;
-    }
+
     #tools_header{
         margin-right: 30px;
         width: 150px;
@@ -245,10 +243,6 @@ footer nav p{
         padding-bottom: 15px;
         width: 100%;
         margin-left: 30px;
-    }
-    #carrinho_img{
-        padding: 0;
-        margin: 0;
     }
     #painel_lateral{
         display: none;
