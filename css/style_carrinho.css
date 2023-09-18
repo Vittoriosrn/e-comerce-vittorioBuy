@@ -7,23 +7,46 @@
     font-family: "inter";
 }
 body{
-    background-color: #f2f3f4;
+    background-color: #333130;
 }
 /*========================Cabeçalho da página======================== */
 
 header{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 
-    padding: 20px 0px 8px 0px;
-    background-color: #232221;
+    padding: 20px 0px 20px 0px;
+    background-color: #333130;
+    font-weight: bold;
+}
+header a{
+    text-decoration: none;
+    color: #fff;
 }
 header > div{
     width: 100px;
 }
-#logo{
-    margin-top: 40px;
-    width: 100%;
+header > nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 190px;
+}
+#register{
+    background-color: #ff4500;
+    padding: 10px 20px 10px 20px;
+}
+.space{
+    margin-right: 90px;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
 }
 
 /*Lista de produtos*/
@@ -33,9 +56,10 @@ header > div{
     flex-direction: column;
 }
 #title_carrinho{
-    font-size: 2em;
+    font-size: 1.5em;
     display: flex;
-    margin: 20px 0px 20px 0px;
+    justify-content: left;
+    width: 67%;
 }
 #carrinho_img{
     width: 35px;
@@ -65,7 +89,6 @@ header > div{
 
     width: 300px;
     margin: 10px;
-    border-radius: 10px;
 }
 #informacoes_gerais_carrinho h3{
     color: #232323;
@@ -74,7 +97,6 @@ header > div{
 }
 #informacoes_gerais_carrinho input{
     border: 2px solid #50505052;
-    border-radius: 5px;
     padding: 5px;
 }
 #informacoes_gerais_carrinho > div{
@@ -131,7 +153,6 @@ header > div{
     border: 2px solid #5050506a;
     background-color: #fff;
     color: #232323;
-    border-radius: 5px;
     padding: 5px;
 }
 .search_button_cep:hover{
@@ -154,7 +175,6 @@ header > div{
     padding: 10px;
     width: 100%;
     margin-top: 20px;
-    border-radius: 10px;
     font-weight: bold;
     font-size: 1em;
 
@@ -171,7 +191,6 @@ header > div{
     box-shadow: 0px 0px 2px #00000015;
 
     margin: 10px;
-    border-radius: 10px;
     padding: 10px;
 }
 
@@ -258,7 +277,7 @@ footer{
     align-items: center;
     text-align: center;
 
-    background-color: #320d00;
+    background-color: #232221;
     color: #fff;
 }
 footer b{
@@ -283,13 +302,7 @@ footer nav p{
 }
 
 /*=================================MEDIA QUERIES============================*/
-@media (max-width: 1168px){
-    header nav a{
-        color: #fff;
-        text-decoration: none;
-        margin-left: 70px;
-    }
-}
+
 @media (max-width: 898px){
     .produto_carrinho{
         width: 400px;
@@ -309,26 +322,5 @@ footer nav p{
     }
     #informacoes_gerais_carrinho{
         width: 95%;
-    }
-}
-@media (max-width: 767px){
-    header{
-        justify-content: space-between;
-        padding: 10px 0px 0px 0px;
-    }
-    header nav a{
-        display: none;
-    }
-    header > div{
-        margin-left: 30px;
-        width: 100%;
-        max-width: 100px;
-    }
-    #logo{
-        width: 100%;
-        padding: 10px 0px 20px 0px;
-    }
-    #nav_bar{
-        display: block;
     }
 }
