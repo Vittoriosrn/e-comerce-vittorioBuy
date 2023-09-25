@@ -4,7 +4,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "inter";
+    font-family: "inter", sans-serif;
+    color: #fff;
 }
 body{
     background-color: #333130;
@@ -21,7 +22,6 @@ header{
 }
 header a{
     text-decoration: none;
-    color: #fff;
 }
 header > div{
     width: 100px;
@@ -49,14 +49,24 @@ header > nav{
     align-items: center;
 }
 
-/*Lista de produtos*/
+/*Geral*/
+.conteudo_header{
+    display: flex;
+}
 #main{
     display: flex;
-    align-items: center;
+    justify-content: center;
+}
+#carrinho_conteudo{
+    display: flex;
     flex-direction: column;
 }
+
+/*Lista de produtos*/
+
 #title_carrinho{
     font-size: 1.5em;
+    margin-bottom: 10px;
     display: flex;
     justify-content: left;
     width: 67%;
@@ -68,7 +78,6 @@ header > nav{
 }
 #title_carrinho h1{
     font-size: 1em;
-    color: #232323;
 }
 
 #lista_prod_carrinho{
@@ -76,22 +85,18 @@ header > nav{
     align-items: center;
     flex-direction: column;
     max-width: 840px;
-}
-#carrinho_conteudo{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    background-color: #4b4948;
+    border-radius: 5px;
 }
 
 /* Carrinho Informações gerais lateral*/
 #informacoes_gerais_carrinho{
-    background-color: #fff;
-
+    background-color: #4b4948;
     width: 300px;
-    margin: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
 }
 #informacoes_gerais_carrinho h3{
-    color: #232323;
     font-size: 1.2em;
     margin-bottom: 20px;
 }
@@ -110,8 +115,6 @@ header > nav{
 .valor_produtos{
     margin-left: 10px;
     font-weight: bold;
-
-    color: #232323;
 }
 .valor_carrinho_avista{
     color: #00830f;
@@ -126,8 +129,6 @@ header > nav{
     flex-direction: column;
     align-items: center;
     padding: 30px 5px 30px 5px;
-
-    background-color: #ca000015;
 }
 .valor_carrinho_total{
     color: #fa0000;
@@ -137,17 +138,12 @@ header > nav{
     color: #fa0000;
     font-weight: bold;
 }
-.frete_resumo{
-    margin-bottom: 10px;
-}
 .frete_valor_container{
     display: flex;
 }
 .valor_frete{
     margin-left: 10px;
     font-weight: bold;
-
-    color: #232323
 }
 .search_button_cep{
     border: 2px solid #5050506a;
@@ -161,7 +157,6 @@ header > nav{
 
 .valor_avista_container{
     font-weight: 600;
-    background-color: #00830f21;
     color: #00830f;
     display: flex;
     flex-direction: column;
@@ -179,7 +174,6 @@ header > nav{
     font-size: 1em;
 
     background-color: #ff4500;
-    color: #fff;
 }
 /*Anuncio do produto */
 
@@ -187,13 +181,10 @@ header > nav{
     display: flex;
     justify-content: space-around;
     width: 520px;
-    background-color: #fff;
-    box-shadow: 0px 0px 2px #00000015;
 
     margin: 10px;
     padding: 10px;
 }
-
 .produto_carrinho img{
     width: 100px;
     height: 100px;
@@ -205,28 +196,33 @@ header > nav{
 }
 .produto_carrinho a{
     text-decoration: none;
-    color: #232323;
 }
 .produto_carrinho a:hover{
     text-decoration: underline;
 }
 .preco_produto{
-    color: #ff4500;
-
     font-weight: bold;
-    font-size: 1.3em;
-    margin: 30px 0px 30px 0px;
+    font-size: 1em;
+    margin-top: 10px;
+}
+.name_produto{
+    margin-top: 30px;
 }
 .excluir_produto{
+    color: #f8612a;
+
     border: 0;
     width: 70px;
     height: 50px;
     font-weight: bold;
     text-align: center;
     transform: translate(-10px, 25px);
-
-    color: #ca0000;
+    
     background-color: transparent;
+}
+.excluir_produto > i{
+    color: #f8612a;
+    margin-bottom: 5px;
 }
 .excluir_produto:hover{
     color: #f8612a;
@@ -241,9 +237,6 @@ header > nav{
     font-size: 1.4em;
 }
 .container_quant_produto{
-    color: #505050;
-    font-weight: bold;
-
     text-align: center;
     margin: 0px 20px 0px 20px;
     display: flex;
@@ -267,6 +260,26 @@ header > nav{
     cursor: pointer;
 }
 
+/*Calcular frete*/
+.calcular_frete{
+    margin-top: 20px;
+    background-color: #4b4948;
+    border-radius: 5px;
+}
+.input_frete{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 40px 40px;
+}
+.input_frete input{
+    width: 300px;
+    margin: 20px 0px 0px 0px;
+    padding: 10px;
+}
+.input_frete h3{
+    font-weight: bold;
+    font-size: 1.5em;
+}
 /*=======================Rodapé da página============================*/
 
 footer{
@@ -290,7 +303,6 @@ footer nav{
     display: flex;
 }
 footer nav a{
-    color: #fff;
     text-decoration: none;
     font-style: italic;
 }

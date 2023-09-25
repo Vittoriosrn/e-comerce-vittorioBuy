@@ -24,93 +24,96 @@
         </div>
     </header>
     <section id="main">
-        <div id="title_carrinho">
-            <img id="carrinho_img" src="../img/carrinho-de-compras_orage.png" alt="carrinho">
-            <h1>CARRINHO</h1>
-        </div>
         <div id="carrinho_conteudo">
-            <section id="lista_prod_carrinho">
-                <div class="produto_carrinho">
-                    <img src="../img/mouse_gamer.jpg" alt="mause_gamer">
-                    <div>
-                        <a href="">
-                            <p class="name_produto">Mouse Gamer Redragon Cobra</p>
-                        </a>
-                        <p class="preco_produto">R$ 150,00</p>
-                    </div>
-                    <div class="container_quant_produto">
-                        <button>
-                            <i class="fa-solid fa-chevron-up"></i>
-                        </button>
-                        1
-                        <button>
-                            <i class="fa-solid fa-chevron-up fa-rotate-180"></i>
-                        </button>
-                    </div>
-                    <button class="excluir_produto">
-                        <i class="fa-solid fa-trash"></i>
-                        REMOVER
-                    </button>
-                </div>
-                <div class="produto_carrinho">
-                    <img src="../img/mouse_gamer.jpg" alt="mause_gamer">
-                    <div>
-                        <a href="">
-                            <p class="name_produto">Mouse Gamer Redragon Cobra</p>
-                        </a>
-                        <p class="preco_produto">R$ 150,00</p>
-                    </div>
-                    <div class="container_quant_produto">
-                        <button>
-                            <i class="fa-solid fa-chevron-up" ></i>
-                        </button>
-                        1
-                        <button>
-                            <i class="fa-solid fa-chevron-up fa-rotate-180"></i>
-                        </button>
-                    </div>
-                    <button class="excluir_produto">
-                        <i class="fa-solid fa-trash"></i>
-                        REMOVER
-                    </button>
-                </div>
-            </section>
-            <section id="informacoes_gerais_carrinho">
-                <div>
-                    <h3>RESUMO</h3>
-                    <div class="valor_produtos_container">
-                        Valor dos produtos:
-                        <p class="valor_produtos">R$ 150,00</p>
-                    </div>
-                    <div class="frete_resumo">
-                        <label for="cep_input">Calcule o Frete</label>
-                        <input type="text" id="cep_input" placeholder="CEP">
-                        <button class="search_button_cep">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                        <div class="frete_valor_container">
-                            Frete:
-                            <p class="valor_frete">R$ 0,00</p>
-                        </div>
-                    </div>
-                    <div class="valor_avista_container">
-                        à vista
-                        <b class="valor_carrinho_avista">R$ 127,50</b>
-                        15% de desconto no PIX
-                    </div>
-                    <div class="valor_total_container">
-                        <b class="valor_carrinho_total">R$ 150,00</b>
+            <div id="title_carrinho">
+                <img id="carrinho_img" src="../img/Icones/Carrinho.png" alt="carrinho">
+                <h1>CARRINHO</h1>
+            </div>
+            <div class="conteudo_header">
+                <section id="lista_prod_carrinho">
+                    <div class="produto_carrinho">
+                        <img src="../img/mouse_gamer/mouse_gamer.jpg" alt="mause_gamer">
                         <div>
-                            até 12x de <span id="valor_aprazo">R$ 12,50</span>
+                            <a href="">
+                                <p class="name_produto">Mouse Gamer Redragon Cobra</p>
+                            </a>
+                            <p class="preco_produto">R$ 150,00</p>
                         </div>
-                     </div>
-                    <button id="finalizar_compra">
-                        FINALIZAR COMPRA
-                    </button>
-                </div>
+                        <div class="container_quant_produto">
+                            <button>
+                                <i class="fa-solid fa-chevron-up"></i>
+                            </button>
+                            1
+                            <button>
+                                <i class="fa-solid fa-chevron-up fa-rotate-180"></i>
+                            </button>
+                        </div>
+                        <button class="excluir_produto">
+                            <i class="fa-solid fa-trash"></i>
+                            REMOVER
+                        </button>
+                    </div>
+                    <div class="produto_carrinho">
+                        <img src="../img/mouse_gamer/mouse_gamer.jpg" alt="mause_gamer">
+                        <div>
+                            <a href="">
+                                <p class="name_produto">Mouse Gamer Redragon Cobra</p>
+                            </a>
+                            <p class="preco_produto">R$ 150,00</p>
+                        </div>
+                        <div class="container_quant_produto">
+                            <button>
+                                <i class="fa-solid fa-chevron-up" ></i>
+                            </button>
+                            1
+                            <button>
+                                <i class="fa-solid fa-chevron-up fa-rotate-180"></i>
+                            </button>
+                        </div>
+                        <button class="excluir_produto">
+                            <i class="fa-solid fa-trash"></i>
+                            REMOVER
+                        </button>
+                    </div>
                 </section>
+                <section id="informacoes_gerais_carrinho">
+                    <div>
+                        <h3>RESUMO</h3>
+                        <div class="valor_produtos_container">
+                            Valor dos produtos:
+                            <p class="valor_produtos">R$ 150,00</p>
+                        </div>
+                        <div class="frete_resumo">
+                            <div class="frete_valor_container">
+                                Frete:
+                                <p class="valor_frete">R$ 0,00</p>
+                            </div>
+                        </div>
+                        <div class="valor_avista_container">
+                            à vista
+                            <b class="valor_carrinho_avista">R$ 127,50</b>
+                            15% de desconto no PIX
+                        </div>
+                        <div class="valor_total_container">
+                            <b class="valor_carrinho_total">R$ 150,00</b>
+                            <div>
+                                até 12x de <span id="valor_aprazo">R$ 12,50</span>
+                            </div>
+                         </div>
+                        <button id="finalizar_compra">
+                            FINALIZAR COMPRA
+                        </button>
+                    </div>
+                </section>
+            </div>
+            <section class="calcular_frete">
+                <div class="input_frete">
+                    <h3>CALCULAR FRETE</h3>
+                    <input placeholder="CEP" type="text" id="cep">
+                </div>
             </section>
         </div>
+    </section>
     <footer>
         <p id="aviso">
             <b>Aviso Importante</b> <br>
