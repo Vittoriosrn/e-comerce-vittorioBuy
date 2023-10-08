@@ -48,6 +48,11 @@ header > nav{
     display: flex;
     align-items: center;
 }
+/*Menu Responsivo*/
+.menubar{
+    font-size: 2em;
+    display: none;
+}
 
 /*Geral*/
 .conteudo_header{
@@ -118,7 +123,7 @@ header > nav{
 }
 .valor_carrinho_avista{
     color: #00830f;
-
+    display: flex;
     font-weight: bold;
     font-size: 2em;
 }
@@ -127,7 +132,6 @@ header > nav{
     font-weight: 600;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 30px 5px 30px 5px;
 }
 .valor_carrinho_total{
@@ -162,7 +166,6 @@ header > nav{
     flex-direction: column;
 
     width: 100%;
-    text-align: center;
     padding: 20px 0px 20px 0px;
 }
 #finalizar_compra{
@@ -269,16 +272,17 @@ header > nav{
 .input_frete{
     display: flex;
     flex-direction: column;
-    padding: 20px 0px 40px 40px;
+    padding: 20px 40px 40px 40px;
 }
 .input_frete input{
-    width: 300px;
+    width: 100%px;
     margin: 20px 0px 0px 0px;
     padding: 10px;
 }
 .input_frete h3{
     font-weight: bold;
     font-size: 1.5em;
+    width: 100%;
 }
 /*=======================Rodapé da página============================*/
 
@@ -315,24 +319,49 @@ footer nav p{
 
 /*=================================MEDIA QUERIES============================*/
 
-@media (max-width: 898px){
+@media (max-width: 940px){
     .produto_carrinho{
         width: 400px;
         height: 100px;
     }
     #lista_prod_carrinho{
         width: 100%;
+        display: flex;
+        align-items:first baseline;
     }
     .preco_produto{
         margin-top: 20px;
     }
-    #carrinho_conteudo{
+    .conteudo_header{
         display: flex;
-        flex-direction: column;
-        align-items: center;
         flex-wrap: wrap;
+        justify-content: center;
     }
     #informacoes_gerais_carrinho{
-        width: 95%;
+        margin: 10px 0px 10px 0px;
+    }
+    #carrinho_conteudo{
+        display: flex;
+        width: 90%;
+    }
+    #informacoes_gerais_carrinho{
+        width: 100%;
+    }
+}
+@media (max-width: 767px){
+    #logo{
+        margin: 0;
+        padding-bottom: 15px;
+        width: 100%;
+        margin-left: 30px;
+    }
+    header{
+        justify-content: space-between;
+    }
+    header > nav, .login-container{
+        display: none;
+    }
+    .menubar{
+        display: block;
     }
 }

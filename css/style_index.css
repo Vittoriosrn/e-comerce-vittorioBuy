@@ -49,6 +49,12 @@ header > nav{
     display: flex;
     align-items: center;
 }
+/*Menu Responsivo*/
+.menubar{
+    font-size: 2em;
+    display: none;
+}
+
 /*========================Banner==========================*/
 .banner{
     display: flex;
@@ -95,7 +101,7 @@ select{
 #dropdown_filtro{
     display: none;
     color: #ff4500;
-    background-color: #fff;
+    background-color: #4b4948;
 
     font-weight: bold;
     padding: 20px;
@@ -297,6 +303,15 @@ footer nav p{
         justify-content: center;
         width: 100vw;
     }
+    header{
+        justify-content: space-between;
+    }
+    header > nav, .login-container{
+        display: none;
+    }
+    .menubar{
+        display: block;
+    }
 }
 /*Ajudando lista de produtos para não ficar espaçado do lado direito*/
 @media (max-width: 1014px){
@@ -307,6 +322,11 @@ footer nav p{
 @media (max-width: 867px){
     .produto{
         width: 30vw;
+    }
+}
+@media (max-width: 599px){
+    .produto{
+        width: 80vw;
     }
 }
 
