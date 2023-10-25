@@ -1,30 +1,58 @@
 /*========================Configurações gerais======================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-*{  
+*{
     margin: 0;
     padding: 0;
     font-family: "inter", sans-serif;
+    color: #fff;
 }
 body{
-    background-color: #f2f3f4;
+    background-color: #333130;
 }
 
 /*========================Cabeçalho da página======================== */
 
 header{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 
-    padding: 20px 0px 8px 0px;
-    background-color: #232221;
+    padding: 20px 0px 20px 0px;
+    background-color: #333130;
+    font-weight: bold;
+}
+header a{
+    text-decoration: none;
 }
 header > div{
     width: 100px;
 }
-#logo{
-    margin-top: 40px;
-    width: 100%;
+header > nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 190px;
+}
+#register{
+    background-color: #ff4500;
+    padding: 10px 20px 10px 20px;
+}
+.space{
+    margin-right: 90px;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+/*Menu Responsivo*/
+.menubar{
+    font-size: 2em;
+    display: none;
 }
 
 /*================================               =============================*/
@@ -36,10 +64,13 @@ main{
 #prod_container{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 
-    background-color: #fff;
+    background-color: #4b4948;
     margin-top: 30px;
     padding: 20px;
+    max-width: 768px;
+    min-width: 768px;
 }
 #prod_ilustracao{
     display: flex;
@@ -153,7 +184,7 @@ main{
     padding: 30px;
     margin-top: 30px;
 
-    background-color: #fff;
+    background-color: #4b4948;
     width: 768px;
 }
 #info_prod_container h3{

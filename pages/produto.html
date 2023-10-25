@@ -9,32 +9,21 @@
 </head>
 <body>
     <header>
-        <div>
-            <a href="../pages/index.html"><img id="logo" src="../img/logo_vittorio_buy.png" alt="logo"></a>
+        <div class="logo-container">
+            <a href=""><img id="logo" src="../img/icones/logo_vittorio_buy_orange.png" alt="logo"></a>
         </div>
-        <section>
-            <nav>
-                <a href="" id="first_nav"><p>PRODUTOS</p></a>
-                <a href=""><p>CARRINHO</p></a>
-                <a href=""><p>LOGIN</p></a>
-            </nav>
-            <div>
-                <input id="input_search" type="text" placeholder="Pesquisar">
-                <button id="search_button">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
-        </section>
-        <div id="tools_header">
-            <div id="search_bar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div id="carrinho_bar">
-                <a href=""><img id="carrinho_img" src="../img/carrinho-de-compras.png" alt="carrinho"></a>
-            </div>
-            <div id="nav_bar">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+        <nav>
+            <a href="../pages/index.html" class="space">Produtos</a>
+            <a href="" class="space">Contato</a>
+            <a href="" class="space"><img src="/img/Icones/Search.png" alt=""></a> 
+            <a href="../pages/carrinho.html"><img src="/img/Icones/carrinho.png" alt="carrinho"></a>    
+        </nav>
+        <div class="login-container">
+            <a href="">Login</a>
+            <a href="" id="register">Criar Conta</a>
+        </div>
+        <div class="menubar">
+            <i class="fa-sharp fa-solid fa-bars"></i>
         </div>
     </header>
     <main>
@@ -62,7 +51,7 @@
             <div id="info_prod_valores">
                 <h3 class="nome_produto"></h3>
                 <div class="valor_avista">
-                    <span class="valor_style" class="valor_avista_total"></span>
+                    <span class="valor_style valor_avista_total"></span>
                     à vista no pix 15% de desconto
                 </div>
                 <div id="valor_aprazo">
@@ -84,30 +73,28 @@
             <table>
                 <tbody>
                     <tr>
-                        <th class="name-fild Marca">Marca</th>
-                        <td class="value-fild Marca"></td>
+                        <th class="name-fild">Marca</th>
+                        <td class="value-fild" id="marca">aa</td>
                     </tr>
                     <tr>
-                        <th class="name-fild Modelo">Modelo</th>
-                        <td class="value-fild Modelo"></td>
+                        <th class="name-fild">Modelo</th>
+                        <td class="value-fild" id="modelo"></td>
                     </tr>
                     <tr>
-                        <th class="name-fild Especificacoes">Especificações</th>
-                        <td class="value-fild Especificacoes">
-                            
-                        </td>
+                        <th class="name-fild">Especificações</th>
+                        <td class="value-fild" id="especificacoes"></td>
                     </tr>
                     <tr>
-                        <th class="name-fild Conteudo_embalagem">Conteúdo da Embalagem</th>
-                        <td class="value-fild Conteudo_embalagem"></td>
+                        <th class="name-fild">Conteúdo da Embalagem</th>
+                        <td class="value-fild" id="Conteudo_embalagem"></td>
                     </tr>
                     <tr>
-                        <th class="name-fild Garantia">Garantia</th>
-                        <td class="value-fild Garantia"></td>
+                        <th class="name-fild">Garantia</th>
+                        <td class="value-fild" id="garantia"></td>
                     </tr>
                     <tr>
-                        <th class="name-fild Peso">Peso</th>
-                        <td class="value-fild Peso"></td>
+                        <th class="name-fild">Peso</th>
+                        <td class="value-fild" id="peso"></td>
                     </tr>
                 </tbody>
             </table>
