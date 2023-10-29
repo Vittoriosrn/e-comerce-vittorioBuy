@@ -1,10 +1,10 @@
 /*========================Configurações gerais======================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 *{
     margin: 0;
     padding: 0;
-    font-family: "inter", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #fff;
 }
 body{
@@ -64,20 +64,22 @@ main{
 #prod_container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 
     background-color: #4b4948;
     margin-top: 30px;
     padding: 20px;
-    max-width: 768px;
+    width: 58vw;
     min-width: 768px;
+    border-radius: 5px;
 }
 #prod_ilustracao{
     display: flex;
     flex-direction: column;
 
     border-radius: 10px;
-    max-width: 450px;
+    max-width: 30vw;
+    min-width: 30vw;;
 }
 #imgs_prod{
     display: flex;
@@ -86,13 +88,11 @@ main{
 #imgs_lateral{
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
 }
 .img_mini{
     width: 50px;
-    border: 2px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
     margin-bottom: 20px;
 }
 .img_mini:hover{
@@ -100,16 +100,18 @@ main{
 }
 .img_mini_last{
     width: 50px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
 }
-#img_full > img{
+.img_mini_last:hover{
+    cursor: pointer;
+}
+
+.img_full_container > img{
     width: 100%;
-    height: 100%;
+    border-radius: 5px;
 }
 #avaliacao_prod{
-    padding: 10px 10px 10px 20px;
+    padding: 10px 10px 10px 75px;
 }
 #avaliacao_prod > i{
     font-size: 0.9em;
@@ -120,8 +122,7 @@ main{
 }
 /*Informações do produto lateral das imagens */
 #info_prod_valores{
-    padding: 20px;
-
+    padding: 40px 20px 20px 20px;
 }
 #info_prod_valores > h3{
     margin-bottom: 20px;
@@ -131,25 +132,25 @@ main{
 .valor_avista{
     display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 30px 30px 30px 30px;
-    font-weight: 600;
-
-    background-color: #00830f21;
-    color: #00830f;
+    text-align: left;
+    margin: 30px 30px 30px 0;
 }
 
 #valor_aprazo > div{
-    color: #d10000;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    font-weight: 600;
-    padding: 30px 30px 30px 30px;
-    background-color: #ca000015;
+    text-align: left;
+    margin: 30px 30px 30px 0;
 }
 .valor_style{
-    font-size: 1.3em;
+    font-weight: 700;
+    font-size: 2em;
+}
+.valor_avista_total{
+    color: #00A202;
+}
+.valor_aprazo_total{
+    color: #ff4500;
 }
 #ver_parcelamento{
     text-decoration: underline;
