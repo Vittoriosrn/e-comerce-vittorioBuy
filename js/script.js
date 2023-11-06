@@ -1,11 +1,14 @@
-import dados_produtos from './produtos.js'
-console.log(dados_produtos)
+import dados_produtos from '../js/produtos.js'
+import produto_selecionado from '../js/produtos_load.js'
 
 const b_aplicar_filtro = document.querySelector("#aplicar_filtro")  // Botão para aplicar o filtro
 const produto = document.querySelectorAll(".produto") // todos os produtos em amostra
 const select_ordem = document.querySelector("#select_ordem")
 const spans_filtro_preco = document.querySelectorAll(".span_preco"); // Selecionar todos os spans do filtro por preço
-
+const imagens_produto = document.querySelectorAll(".img_mini");
+const ver_parcelameto_button = document.querySelector("#ver_parcelamento");
+const parcelamentos_container = document.querySelector(".parcelamentos")
+const parcelamento_text = document.querySelector(".parcelamento_select");
 // ==================== FUNÇÕES ====================
 // Função filtrar por PREÇO
 function filtrar_preco(menor_preco, maior_preco){
@@ -82,68 +85,101 @@ spans_filtro_preco.forEach((span, index) =>{
 })
 
 // Evento FILTRAR
-b_aplicar_filtro.addEventListener("click", () => {
-    const filtro_marca = document.querySelectorAll(".filtro_marca")
-    const produtos_checked = ['empty'] // Array para armazena os filtros selecionado
-    let n_checked = 0 // Esse indice define a posição dos filtros checados no array
-    
-    for(let i = 0; i < filtro_marca.length; i++){ // For percorre todos os filtros para checar qual está selecionado
-        if(filtro_marca[i].checked){
-            produtos_checked[n_checked] = filtro_marca[i].id
-            n_checked++
+if(b_aplicar_filtro){
+    b_aplicar_filtro.addEventListener("click", () => {
+        const filtro_marca = document.querySelectorAll(".filtro_marca")
+        const produtos_checked = ['empty'] // Array para armazena os filtros selecionado
+        let n_checked = 0 // Esse indice define a posição dos filtros checados no array
+        
+        for(let i = 0; i < filtro_marca.length; i++){ // For percorre todos os filtros para checar qual está selecionado
+            if(filtro_marca[i].checked){
+                produtos_checked[n_checked] = filtro_marca[i].id
+                n_checked++
+            }
         }
-    }
-    filtrar(produtos_checked)
-})
+        filtrar(produtos_checked)
+    })
+}
 
 // Evento/Função ORDENAR
-select_ordem.addEventListener('change', (e) => {
-    const array_prod = Array.from(produto) // função from para transformar NodeList em array para o sort
-
-    switch (e.target.value){
-        case 'preco_crescente':
-            array_prod.sort((a, b) => { // Metodo sort para ordenar o array de elementos
-                if(Number(a.querySelector(".value_preco").innerText) < Number(b.querySelector(".value_preco").innerText)){
-                    return -1  // retorna 1 para verdadeiro em ordem decrescente e -1 para ordem crescente
-                }else{
-                    return 1 
-                }
-            })
-        break
-        case 'preco_decrescente':
-            array_prod.sort((a, b) => {
-                if(Number(a.querySelector(".value_preco").innerText) < Number(b.querySelector(".value_preco").innerText)){
-                    return 1
-                }else{
-                    return -1
-                }
-            })
-        break
-        case 'promocao':
-            array_prod.sort((a, b) => {
-                if(Number(a.querySelector(".promocao_porc").innerText) < Number(b.querySelector(".promocao_porc").innerText)){
-                    return 1
-                }else{
-                    return -1
-                }
-            })
-        break
-        case 'mais_avaliados':
-            array_prod.sort((a, b) => {
-                if(Number(a.querySelector(".avaliacao").innerText) < Number(b.querySelector(".avaliacao").innerText)){
-                    return 1
-                }else{
-                    return -1
-                }
-            })
-        }
-    //Limpar os produtos
-    produto.forEach(() => {
-        document.querySelector(".produto").remove() // Seleciona cada produto e remove
+if(select_ordem){
+    select_ordem.addEventListener('change', (e) => {
+        const array_prod = Array.from(produto) // função from para transformar NodeList em array para o sort
+    
+        switch (e.target.value){
+            case 'preco_crescente':
+                array_prod.sort((a, b) => { // Metodo sort para ordenar o array de elementos
+                    if(Number(a.querySelector(".value_preco").innerText) < Number(b.querySelector(".value_preco").innerText)){
+                        return -1  // retorna 1 para verdadeiro em ordem decrescente e -1 para ordem crescente
+                    }else{
+                        return 1
+                    }
+                })
+            break
+            case 'preco_decrescente':
+                array_prod.sort((a, b) => {
+                    if(Number(a.querySelector(".value_preco").innerText) < Number(b.querySelector(".value_preco").innerText)){
+                        return 1
+                    }else{
+                        return -1
+                    }
+                })
+            break
+            case 'promocao':
+                array_prod.sort((a, b) => {
+                    if(Number(a.querySelector(".promocao_porc").innerText) < Number(b.querySelector(".promocao_porc").innerText)){
+                        return 1
+                    }else{
+                        return -1
+                    }
+                })
+            break
+            case 'mais_avaliados':
+                array_prod.sort((a, b) => {
+                    if(Number(a.querySelector(".avaliacao").innerText) < Number(b.querySelector(".avaliacao").innerText)){
+                        return 1
+                    }else{
+                        return -1
+                    }
+                })
+            }
+        //Limpar os produtos
+        produto.forEach(() => {
+            document.querySelector(".produto").remove() // Seleciona cada produto e remove
+        })
+        //Adicionar os produtos de volta na ordem
+        array_prod.forEach((e) =>{
+            const lista_produtos = document.querySelector("#lista_produtos")
+            lista_produtos.appendChild(e) // e representa o produto que o forEach está percorrendo
+        })
     })
-    //Adicionar os produtos de volta na ordem
-    array_prod.forEach((e) =>{
-        const lista_produtos = document.querySelector("#lista_produtos")
-        lista_produtos.appendChild(e) // e representa o produto que o forEach está percorrendo
+}
+
+// Evento de alternar imagem na pagina do produto
+
+imagens_produto.forEach((imagens_produto, index) =>{
+    imagens_produto.addEventListener("click", () =>{
+        const img_full = document.querySelector(".img_full")
+        img_full.src = `${produto_selecionado.imagens[index]}`
     })
 })
+// mostrar parcelamentos
+if(ver_parcelameto_button){
+    ver_parcelameto_button.addEventListener("click", () =>{
+        if(parcelamentos_container.classList.contains("hide")){
+            parcelamentos_container.classList.remove("hide") 
+        }else{
+            parcelamentos_container.classList.add("hide") 
+        }
+    })
+}
+// selecionar parcelamento 
+const parcelamentos = document.querySelectorAll('.valor')
+parcelamentos.forEach((parcelamentos) => {
+    parcelamentos.addEventListener("click", () => {
+        parcelamento_text.innerHTML = parcelamentos.innerHTML;
+    })
+})
+
+
+

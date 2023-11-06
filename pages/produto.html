@@ -41,7 +41,7 @@
                         <img class="img_mini1 img_mini" src="">
                         <img class="img_mini2 img_mini" src="" alt="imagem produto">
                         <img class="img_mini3 img_mini" src="" alt="imagem produto">
-                        <img class="img_mini_last" src="" alt="imagem produto">
+                        <img class="img_mini_last img_mini4 img_mini" src="" alt="imagem produto">
                     </div>
                     <div class="img_full_container">
                         <img class="img_full" src="" alt="imagem produto">
@@ -57,11 +57,22 @@
                 <div id="valor_aprazo">
                     <div>
                         <span class="valor_style valor_aprazo_total">R$ <span class="preco_total"></span></span>
-                        <span><span class="parcela"></span>6x de R$ <span class="preco_aprazo"></span> no cartão</span>
+                        <span><span class="parcela"></span><span class="parcelamento_select">até 10x</span> no cartão</span>
                     </div>
                     <button id="ver_parcelamento">
-                        ver parcelamento
+                        selecionar parcelamento
                     </button>
+                    <div class="parcelamentos hide">
+                        <p><span class="valor"></span></p>
+                        <p><span class="valor"></span></p>
+                        <p><span class="valor"></span></p>
+                        <p><span class="valor"></span></p>
+                        <p><span class="valor"></span></p>
+                        <p><span class="valor"></span></p>
+                        <p><span class="valor"></span></p>
+                        <p><span class="valor"></span></p>
+                        <p><span class="valor"></span></p>
+                    </div>
                 </div>
                 <button id="botao_compra">
                     COMPRAR
@@ -118,5 +129,6 @@
         </nav>
     </footer>
     <script src="../js/produtos_load.js" type="module"></script>
+    <script src="../js/script.js" type="module"></script>
 </body>
 </html>
