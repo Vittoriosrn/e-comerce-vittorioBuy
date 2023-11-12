@@ -163,7 +163,7 @@ main{
     border-radius: 10px;
     margin: 10px 0px 10px 0px
 }
-#ver_parcelamento:hover{
+.parcelamentos:hover{ /*alterar cursor no hover do parcelamento*/
     cursor: pointer;
 }
 .parcelamentos p{
