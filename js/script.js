@@ -227,31 +227,92 @@ if(add_cart_button){
 })
 }
 
-// REMOVER CARRINHO
+// REMOVE PRODUCT
 
-let excluir_produto_button = document.querySelectorAll(".excluir_produto")
+excluir_produto_carrinho()
 
-excluir_produto_button.forEach((excluir_produto_button, index) => {
-    excluir_produto_button.addEventListener("click", () =>{
-        for(let i = index; i < quantidade; i++){
-            produto_carrinho[i] = produto_carrinho[i+1]
-        }
-        produto_carrinho.pop() // remover ultimo elemento do array
+function excluir_produto_carrinho(){
+    const excluir_produto_button = document.querySelectorAll(".excluir_produto")
+    excluir_produto_button.forEach((excluir_produto_button, index) => {
+        excluir_produto_button.addEventListener("click", () =>{
+            for(let i = index; i < quantidade; i++){
+                produto_carrinho[i] = produto_carrinho[i+1]
+            }
+            produto_carrinho.pop() // remover ultimo elemento do array
+        
+            localStorage.clear()
+            localStorage.setItem("ids_cart", produto_carrinho)
+            quantidade--
+            localStorage.setItem("quantidade", quantidade)
     
-        localStorage.clear()
-        localStorage.setItem("ids_cart", produto_carrinho)
-        quantidade--
-        localStorage.setItem("quantidade", quantidade)
-
-        const lista_prod_carrinho = document.querySelector('#lista_prod_carrinho')
-        while(lista_prod_carrinho.firstChild){
-            lista_prod_carrinho.removeChild(lista_prod_carrinho.firstChild)
-        }
-       create_elements_cart()
-       console.log(excluir_produto_button)
+            const lista_prod_carrinho = document.querySelector('#lista_prod_carrinho')
+            while(lista_prod_carrinho.firstChild){
+                lista_prod_carrinho.removeChild(lista_prod_carrinho.firstChild)
+            }
+           create_elements_cart()
+           excluir_produto_carrinho()
+           update_resume()
+        })
     })
-    excluir_produto_button = document.querySelectorAll(".excluir_produto")
-})
+}
+
+// SELECT PRODUCT QUANTITY
+
+if(document.querySelector('.quant_product_value')){
+    const quant_product_buttom = document.querySelectorAll('.quant_product_buttom')
+    const quant_product_buttom_plus = document.querySelectorAll('.quant_product_buttom_plus')
+    let quant_product_value = document.querySelectorAll('.quant_product_value')
+
+    quant_product_buttom.forEach((quant_product_buttom, index) => {
+        quant_product_buttom.addEventListener('click', () => {
+            let new_quant_product = Number(quant_product_value[index].innerHTML)
+            if(new_quant_product > 1){
+                quant_product_value[index].innerHTML = `${new_quant_product-1}`
+            }
+            update_resume()
+        })
+    })
+    quant_product_buttom_plus.forEach((quant_product_buttom_plus, index) =>{
+        quant_product_buttom_plus.addEventListener('click', () => {
+            let new_quant_product = Number(quant_product_value[index].innerHTML)
+            if(new_quant_product >= 1){
+                quant_product_value[index].innerHTML = `${new_quant_product+1}`
+            }
+            update_resume()
+        })
+    })
+}
+
+// UPDATE RESUME CART
+update_resume()
+function update_resume(){
+    const valor_carrinho_avista = document.querySelector(".valor_carrinho_avista")
+    const valor_carrinho_total = document.querySelector(".valor_carrinho_total")
+    const valor_produtos = document.querySelector(".valor_produtos")
+    const all_products = document.querySelectorAll(".produto_carrinho")
+    let valor_total = 0
+    let valor_avista  = 0
+
+    for(let i = 0; i < Number(localStorage.getItem("quantidade")); i++){
+        // valor total e a prazo
+        valor_total += Number((all_products[i].querySelector(".preco_produto").innerHTML))
+        valor_carrinho_total.innerHTML = valor_total.toFixed(2).replace(".", ",")
+        valor_produtos.innerHTML = valor_total.toFixed(2).replace(".", ",")
+
+        //valor à vista com desconto
+        valor_avista += Number((all_products[i].querySelector(".preco_produto").innerHTML))
+        valor_avista -= (valor_avista/100)*15
+        valor_carrinho_avista.innerHTML = valor_avista.toFixed(2).replace(".", ",")
+    }
+
+    //valor_carrinho_avista.innerHTML = 
+
+}
+
+
+
+
+
 
 
 
